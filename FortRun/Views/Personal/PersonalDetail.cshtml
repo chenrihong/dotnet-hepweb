@@ -1,0 +1,144 @@
+﻿@{
+    ViewBag.Title = "会员基本信息";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Header
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var toolbar = [
+                {
+                    iconCls: 'icon-save',
+                    handler: function () {
+                        alert('保存');
+                    }
+                }];
+
+            $('#pn').panel({ tools: toolbar });
+        });
+    </script>
+}
+<div id="pn" class="easyui-panel" title="会员详细信息" style="width: 600px;">
+    <div style="padding: 10px 10px 0 60px;">
+        <form id="ff" method="post">
+        <table>
+            <caption>
+            </caption>
+            <tr>
+                <td>
+                    姓名:
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="name" data-options="required:true"></input>
+                </td>
+                <td>
+                    手机:
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="name" data-options="required:true"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    性别:
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="email" data-options="required:true,validType:'email'"></input>
+                </td>
+                <td>
+                    电话:
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="name" data-options="required:true"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    称谓:
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="subject" data-options="required:true"></input>
+                </td>
+                <td>
+                    传真:
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="name" data-options="required:true"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    国家:
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="name" data-options="required:true"></input>
+                </td>
+                <td>
+                    Email:
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="name" data-options="required:true"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    民族:
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="email" data-options="required:true,validType:'email'"></input>
+                </td>
+                <td>
+                    邮编:
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="name" data-options="required:true"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    证件类型:
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="subject" data-options="required:true"></input>
+                </td>
+                <td>
+                    注册时间:
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="name" data-options="required:true"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    证件号码:
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="name" data-options="required:true"></input>
+                </td>
+                <td>
+                    HEP入住次数:
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="name" data-options="required:true"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    状态:
+                </td>
+                <td colspan="3">
+                    <input class="easyui-validatebox" type="text" name="email" data-options="required:true,validType:'email'"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    备注:
+                </td>
+                <td colspan="3">
+                    <textarea name="message" style="height: 60px; width: 380px;"></textarea>
+                </td>
+            </tr>
+        </table>
+        </form>
+    </div>
+</div>

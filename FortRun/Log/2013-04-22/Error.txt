@@ -1,0 +1,1 @@
+TIME:2013-04-22 16:44:32.3806 METHOD:FortRun.BLL.MemberHelper.GetMemberList MESSAGE:假设的错误

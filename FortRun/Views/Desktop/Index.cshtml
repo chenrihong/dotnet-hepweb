@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+    var v = DateTime.Now.ToString("yyyyMMddhhmmss");
+    var guid = ViewBag.Guid;
+}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="javascriptEnabled win win5_1 firefox firefox8_0 gecko gecko20100101_0 flash flash11_0"
+style="overflow: hidden;">
+<head>
+    <meta charset="utf-8" />
+    <meta content="minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, width=device-width, user-scalable=no"
+        name="viewport" />
+    <meta content="width=1024;height=768" name="msapplication-window" />
+    <meta content="ooeu0Ygs68PA-Vyx1AiufsVIVVbkU7RukGiAeXhSxlA" name="google-site-verification" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta content="#b4d9f1" name="msapplication-navbutton-color" />
+    <title>HEP - 后端 | 上海复创</title>
+    <link href="@Url.Content("~/Content/webdesk/css/webos.all.css?v=" + Html.OutputText(v))" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/webdesk/css/webos.main.css?v=" + Html.OutputText(v))"  rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/webdesk/css/webos.main.2.css?v=" + Html.OutputText(v))"  rel="stylesheet" charset="utf-8" type="text/css" />
+    <link href="@Url.Content("~/Content/webdesk/css/style.css?v=" + Html.OutputText(v))"  rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="@Url.Content("~/Content/webdesk/js/jquery-1.4.4.min.js?v=" + Html.OutputText(v))"  ></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/webdesk/js/json.js?v=" + Html.OutputText(v))"  ></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/webdesk/js/jqueryEx.js?v=" + Html.OutputText(v))"   charset="gb2312"></script>
+    @*<script type="text/javascript" src="@Url.Content("~/Content/webdesk/js/deskjs.js?v=" + Html.OutputText(v))"   charset="gb2312"></script>*@
+    <script src="/Desktop/DeskJson/@ViewBag.Guid"></script>
+</head>
+<body style="display: block; height: 720px; background: none repeat scroll 0% 0% transparent;">
+    <noscript>
+        &lt;div class="noscript"&gt; 你好，需要浏览器开启JavaScript功能有效访问本站&lt;br/&gt; 请设置浏览器开启 JavaScript功能，然后重试。
+        &lt;/div&gt;
+    </noscript>
+    <script src="@Url.Content("~/Content/webdesk/js/jquery-smartMenu.js?v=" + Html.OutputText(v))"  type="text/javascript"></script>
+</body>
+</html>

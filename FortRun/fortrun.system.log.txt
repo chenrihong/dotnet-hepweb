@@ -1,0 +1,2 @@
+[日志]2013-04-22 13:38:34,029 [13] WARN  FortRun.Web.Controllers.LogTestController [(null)] - 警告：warn
+[结束]

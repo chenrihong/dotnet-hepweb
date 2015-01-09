@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "GroupDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Header
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#GroupDetail').panel({
+                title: top.getTabTitle()
+            });
+        });
+    </script>
+}
+<div style="margin: 5px;">
+    <div id="GroupDetail" class="easyui-panel" title="111" style="width: 900px; height: 400px;
+        padding: 10px;" data-options="tools:'#tt'">
+        <form id="ff" name="ff" method="POST">
+        <table>
+            <tr>
+                <td>
+                    @Html.OutputText("province".Toi18n()):
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="name" data-options="required:true"></input>
+                </td>
+                <td>
+                    @Html.OutputText("city".Toi18n()):
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="name" data-options="required:true"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.OutputText("county".Toi18n()):
+                </td>
+                <td colspan="3">
+                    <input class="easyui-validatebox" type="text" name="name" data-options="required:true"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.OutputText("GroupName".Toi18n()):
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="name" data-options="required:true"></input>
+                </td>
+                <td>
+                    @Html.OutputText("GroupHotelNum".Toi18n()):
+                </td>
+                <td>
+                    <input class="easyui-numberbox" type="text" name="name" data-options="required:true"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.OutputText("GroupAccount".Toi18n()):
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="GroupAccount" data-options="required:true,validType:'email'"></input>
+                </td>
+                <td>
+                    @Html.OutputText("GroupAccStatus".Toi18n()):
+                </td>
+                <td>
+                    <select class="easyui-combobox" name="GroupAccStatus">
+                        <option value="on">@Html.OutputText("on".Toi18n())</option>
+                        <option value="off">@Html.OutputText("off".Toi18n())</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.OutputText("remark".Toi18n()):
+                </td>
+                <td colspan="3">
+                    <textarea name="remark" style="height: 60px; width: 357px;"></textarea>
+                </td>
+            </tr>
+        </table>
+        </form>
+    </div>
+</div>
+<div id="tt">
+    <a href="javascript:void(0)" class="icon-save" onclick="javascript:alert('save')">
+    </a>
+</div>

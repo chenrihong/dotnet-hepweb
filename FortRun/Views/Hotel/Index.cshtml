@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "酒店设置-酒店管理";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Header
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#datagrid').datagrid({
+                url: "/Hotel/GetHotelList",
+                rownumbers: true,
+                fit: true,
+                singleSelect: true,
+                toolbar: '#toolbar',
+                columns: [[{ field: 'HotelID', hidden: true, title: '@Html.OutputText("HotelID".Toi18n())', width: 100 },
+                    { field: 'Province', title: '@Html.OutputText("province".Toi18n())', width: 100 },
+                     { field: 'City', title: '@Html.OutputText("city".Toi18n())', width: 100 },
+                     { field: 'County', title: '@Html.OutputText("county".Toi18n())', width: 100 },
+                    { field: 'HotelName', title: '@Html.OutputText("HotelName".Toi18n())', width: 120 },
+                    { field: 'HotelAccount', title: '@Html.OutputText("HotelAccount".Toi18n())', width: 120 },
+                    { field: 'HotelAccStatus', title: '@Html.OutputText("HotelAccStatus".Toi18n())', width: 120, formatter: function (value, row, index) {
+                        return value == 'on' ? locale.status.status_on : locale.status.status_off;
+                    }
+                    },
+                    { field: 'HotelHepNum', title: '@Html.OutputText("HotelHepNum".Toi18n())', width: 120 },
+                    { field: 'other', title: '', width: 120, formatter: function (value, row, index) {
+                        return '<a onclick="doPersonalDetail(\'' + row.HotelName + '\',\'' + row.HotelID + '\')" href="javascript:void(0)">详情</a>';
+                    }
+                    }]]
+            });
+
+            $('#win').window('close');
+
+            function doSearch(val) {
+                if (val != '') {
+                    //do search
+                }
+            }
+
+            window.validSearchParam = function () {
+                var val = $('#HotelName').val();
+                val == '' ? $('#HotelName').focus() : doSearch(val);
+            };
+            window.doReload = function () {
+                $('#datagrid').datagrid('reload');
+            };
+            window.doAdd = function () {
+                $('#win').window({
+                    title: locale.btn.btn_add
+                });
+                $('#win').window('open');
+            };
+            window.doEdit = function () {
+                var data = $('#datagrid').datagrid('getSelected');
+                if (data) {
+                    $('#ff').form('load', {
+                        HotelID: data.HotelID,
+                        HotelName: data.HotelName,
+                        HotelAccount: data.HotelAccount,
+                        HotelAccStatus: data.HotelAccStatus,
+                        Province: data.Province,
+                        HotelHepNum: data.HotelHepNum
+                    });
+                    $('#win').window({
+                        title: locale.btn.btn_edit
+                    });
+                    $('#win').window('open');
+                } else {
+                    $.messager.alert(locale.msg.msg_title_info, locale.msg.msg_question_edit_null, 'info');
+                }
+            };
+            window.doRemove = function () {
+                var data = $('#datagrid').datagrid('getSelected');
+                if (data) {
+                    $.messager.confirm(locale.msg.msg_title_ques, locale.fn.fn_remove(data.HotelName), function (r) {
+                        if (r) {
+                            var rowIndex = $('#datagrid').datagrid('getRowIndex', data);
+                            $('#datagrid').datagrid('deleteRow', rowIndex);
+                        }
+                    });
+                } else {
+                    $.messager.alert(locale.msg_title_info, msg_question_remvove_null, 'info');
+                }
+            };
+        });
+    </script>
+}
+<table id="datagrid">
+    <!--datagrid-->
+</table>
+<div id="toolbar" style="padding: 5px; height: auto">
+    <div style="margin-bottom: 5px">
+        <a href="#" onclick="doAdd()" class="easyui-linkbutton" iconcls="icon-add" plain="true">
+            @Html.OutputText("add".Toi18n())</a> <a href="#" class="easyui-linkbutton" onclick="doEdit()"
+                iconcls="icon-edit" plain="true">@Html.OutputText("edit".Toi18n())</a> <a href="#"
+                    class="easyui-linkbutton" iconcls="icon-remove" onclick="doRemove()" plain="true">@Html.OutputText("remove".Toi18n())</a>
+        <a href="#" class="easyui-linkbutton" iconcls="icon-reload" plain="true" onclick="doReload()">@Html.OutputText("reload".Toi18n())</a>
+    </div>
+    <div>
+        <label for="HotelName">
+            @Html.OutputText("HotelName".Toi18n())：</label>
+        <input id="HotelName" class="easyui-validatebox" data-options="required:true,validType:''" />
+        <a id="btn" href="#" onclick="validSearchParam()" class="easyui-linkbutton" data-options="iconCls:'icon-search'">
+            @Html.OutputText("search".Toi18n())</a>
+    </div>
+</div>

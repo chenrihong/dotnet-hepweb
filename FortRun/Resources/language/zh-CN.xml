@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary>
+  <Language Key="zh-CN" Value="简体中文">
+    <Module Key="natural" Value="自然属性">
+      <Property Key="province" Value="省份" />
+      <Property Key="city" Value="城市" />
+      <Property Key="county" Value="区县" />
+
+      <Property Key="male" Value="男" />
+      <Property Key="female" Value="女" />
+      <Property Key="on" Value="启用" />
+      <Property Key="off" Value="停用" />
+    </Module>
+
+    <Module Key="system" Value="系统模块">
+      <Property Key="add" Value="新增" />
+      <Property Key="remove" Value="删除" />
+      <Property Key="edit" Value="编辑" />
+      <Property Key="search" Value="搜索" />
+      <Property Key="reload" Value="重载数据" />
+      <Property Key="submit" Value="提交" />
+      <Property Key="reset" Value="重置" />
+      <Property Key="remark" Value="备注" />
+    </Module>
+
+    <Module Key="UserBaseModel" Value="系统用户模块">
+      <Property Key="memID" Value="会员ID" />
+      <Property Key="memName" Value="会员姓名" />
+      <Property Key="memPwd" Value="密码" />
+      <Property Key="memSex" Value="性别" />
+      <Property Key="memStatus" Value="状态" />
+      <Property Key="memIdNum" Value="身份证号码" />
+      <Property Key="memCellPhone" Value="手机号码" />
+      <Property Key="memRegisterTime" Value="注册时间" />
+    </Module>
+
+    <Module Key="ResourceModel" Value="系统资源设置模块">
+      <Property Key="resID" Value="资源ID" />
+      <Property Key="resCategory" Value="资源类别" />
+      <Property Key="resName" Value="资源名称" />
+      <Property Key="resSystem" Value="所属系统" />
+      <Property Key="resScope" Value="范围" />
+      <Property Key="resStatus" Value="启用状态" />
+    </Module>
+
+    <Module Key="Hotel-Group" Value="酒店设置-集团管理">
+      <Property Key="GroupID" Value="集团ID" />
+      <Property Key="GroupName" Value="酒店集团" />
+      <Property Key="GroupAccount" Value="集团账号" />
+      <Property Key="GroupAccStatus" Value="账号状态" />
+      <Property Key="GroupHotelNum" Value="酒店数量" />
+    </Module>
+
+    <Module Key="Hotel-Hotel" Value="酒店设置-酒店管理">
+      <Property Key="HotelID" Value="集团ID" />
+      <Property Key="HotelName" Value="酒店名称" />
+      <Property Key="HotelAccount" Value="酒店账号" />
+      <Property Key="HotelAccStatus" Value="账号状态" />
+      <Property Key="HotelHepNum" Value="Hep终端数量" />
+    </Module>
+  </Language>
+</ResourceDictionary>

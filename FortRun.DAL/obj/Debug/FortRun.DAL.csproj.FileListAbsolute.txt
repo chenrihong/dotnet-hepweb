@@ -1,0 +1,14 @@
+D:\CRH\HepWeb\FortRun.DAL\bin\FortRun.DAL.dll
+D:\CRH\HepWeb\FortRun.DAL\bin\FortRun.DAL.pdb
+D:\CRH\HepWeb\FortRun.DAL\bin\NLog.dll
+D:\CRH\HepWeb\FortRun.DAL\bin\NLog.xml
+D:\CRH\HepWeb\FortRun.DAL\obj\Debug\ResolveAssemblyReference.cache
+D:\CRH\HepWeb\FortRun.DAL\obj\Debug\FortRun.DAL.dll
+D:\CRH\HepWeb\FortRun.DAL\obj\Debug\FortRun.DAL.pdb
+D:\C#\HepWeb\HepWeb\FortRun.DAL\bin\FortRun.DAL.dll
+D:\C#\HepWeb\HepWeb\FortRun.DAL\bin\FortRun.DAL.pdb
+D:\C#\HepWeb\HepWeb\FortRun.DAL\bin\NLog.dll
+D:\C#\HepWeb\HepWeb\FortRun.DAL\bin\NLog.xml
+D:\C#\HepWeb\HepWeb\FortRun.DAL\obj\Debug\FortRun.DAL.csprojResolveAssemblyReference.cache
+D:\C#\HepWeb\HepWeb\FortRun.DAL\obj\Debug\FortRun.DAL.dll
+D:\C#\HepWeb\HepWeb\FortRun.DAL\obj\Debug\FortRun.DAL.pdb

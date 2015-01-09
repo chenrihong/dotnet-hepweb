@@ -1,0 +1,263 @@
+﻿@{
+    ViewBag.Title = "DataGridDemo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Header
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var toolbar = [{
+                text: '添加',
+                iconCls: 'icon-add',
+                handler: function () { doAdd(); }
+            }, {
+                text: '编辑',
+                iconCls: 'icon-edit',
+                handler: function () { doEdit(); }
+            }, {
+                text: '删除',
+                iconCls: 'icon-remove',
+                handler: function () { doRemove(); }
+            }, '-', {
+                text: '刷新数据',
+                iconCls: 'icon-reload',
+                handler: function () { doReload(); }
+            }];
+
+            $('#datagrid').datagrid({
+                url: "/Main/GetMemData",
+                onRowContextMenu: onRowContextMenu,
+                onClickRow: function (index, row) {
+
+                },
+                rownumbers: true,
+                fit: true,
+                singleSelect: true,
+                toolbar: '#toolbar',
+                //toolbar: toolbar,
+                rowStyler: function (index, row) {
+                    //                    if (index % 2 == 0) {
+                    //                        return 'background-color:#333333;';//color:#fff;
+                    //                    } else {
+                    //                        return 'background-color:#999999;';//color:#fff;
+                    //                    }
+                },
+                columns: [[{ field: 'memID', title: '会员ID',
+                    width: 100
+                }, { field: 'memName', title: '会员姓名', width: 100 }, { field: 'memSex',
+                    title: '性别', width: 100, align: 'center'
+                }, { field: 'memStatus', title: '状态', width: 100
+                }, { field: 'memIdNum', title: '证件号', width: 100 }, { field: 'memCellPhone',
+                    title: '手机号码', width: 100
+                }, { field: 'memRegisterTime', title: '注册时间', width: 100
+                }, { field: 'other', title: '操作', width: 100,
+                    formatter: function (value, row, index) {
+                        return '<a onclick="doPersonalDetail(\'' + row.memName + '\',\'' + row.memID + '\')" href="javascript:void(0)">详情</a>';
+                    }
+                }]]
+            });
+
+            $('#win').window('close');
+
+            //datagrid context menu
+            function onRowContextMenu(e, rowIndex, rowData) {
+                e.preventDefault();
+                $(this).datagrid('selectRow', rowIndex);
+                $('#mm').menu('show', {
+                    left: e.pageX,
+                    top: e.pageY
+                });
+            }
+            function doSearch(val) {
+                if (val != '') {
+                    //do search
+                }
+            }
+
+            window.validSearchParam = function () {
+                var val = $('#memName').val();
+                val == '' ? $('#memName').focus() : doSearch(val);
+            };
+            window.doReload = function () {
+                $('#datagrid').datagrid('reload');
+            };
+            window.doAdd = function () {
+                $('#win').window({
+                    title: '新增会员'
+                });
+                $('#win').window('open');
+            };
+            window.doEdit = function () {
+                var data = $('#datagrid').datagrid('getSelected');
+                if (data) {
+                    $('#ff').form('load', {
+                        memID: data.memID,
+                        memName: data.memName,
+                        memSex: data.memSex,
+                        memStatus: data.memStatus,
+                        memIdNum: data.memIdNum,
+                        memCellPhone: data.memCellPhone
+                    });
+                    $('#win').window({
+                        title: '编辑会员[' + data.memID + ']'
+                    });
+                    $('#win').window('open');
+                } else {
+                    $.messager.alert('提示', '请选中要编辑的行', 'info');
+                }
+            };
+            window.doRemove = function () {
+                var data = $('#datagrid').datagrid('getSelected');
+                if (data) {
+                    $.messager.confirm('确认', '您确认要删除会员[' + data.memName + ']吗？', function (r) {
+                        if (r) {
+                            var rowIndex = $('#datagrid').datagrid('getRowIndex', data);
+                            $('#datagrid').datagrid('deleteRow', rowIndex);
+                        }
+                    });
+                } else {
+                    $.messager.alert('提示', '请选择您要删除的对象', 'info');
+                }
+            };
+            window.submitForm = function () {
+                $('#ff').form({
+                    url: '/Main/AddMember',
+                    onSubmit: function () {
+                        return $(this).form('validate');
+                    },
+                    success: function (data) {
+                        var rowdata = {
+                            memID: 9999,
+                            memName: form1.memName.value,
+                            memSex: form1.memSex.value,
+                            memStatus: form1.memStatus.value,
+                            memIdNum: form1.memIdNum.value,
+                            memCellPhone: form1.memCellPhone.value
+                        };
+                        appendRowByAdd(rowdata);
+
+                        data = $.parseJSON(data); //string to json
+                        $.messager.alert('提示', data.message, 'info');
+                        $('#win').window('close');
+                    }
+                });
+                $('#ff').submit();
+            };
+            window.clearForm = function () {
+                $('#ff').form('clear');
+            };
+
+            function appendRowByAdd(data) {
+                if (data) {
+                    $('#datagrid').datagrid('insertRow', {
+                        index: 0,
+                        row: {
+                            memID: data.memID,
+                            memName: data.memName,
+                            memSex: data.memSex,
+                            memStatus: data.memStatus,
+                            memIdNum: data.memIdNum,
+                            memCellPhone: data.memCellPhone
+                        }
+                    });
+                }
+            }
+        });
+
+        function doPersonalDetail(t, id) {
+            if (t && id && t != id) {
+                var href = "/Personal/PersonalDetail?peronid" + id;
+                window.top.addTab('会员(' + t + ')详情', href, 'icon-edit');
+            }
+        }
+    </script>
+}
+<table id="datagrid">
+    <!--datagrid-->
+</table>
+<div id="mm" class="easyui-menu" style="width: 120px;">
+    <div data-options="iconCls:'icon-add'" onclick="doAdd()">
+        新增</div>
+    <div data-options="iconCls:'icon-edit'" onclick="doEdit()">
+        编辑</div>
+    <div data-options="iconCls:'icon-remove'" onclick="doRemove()">
+        删除</div>
+    <div class="menu-sep">
+    </div>
+    <div data-options="iconCls:'icon-reload'" onclick="doReload()">
+        刷新数据</div>
+</div>
+<div id="toolbar" style="padding: 5px; height: auto">
+    <div style="margin-bottom: 5px">
+        <a href="#" onclick="doAdd()" class="easyui-linkbutton" iconcls="icon-add" plain="true">
+            添加</a> <a href="#" class="easyui-linkbutton" onclick="doEdit()" iconcls="icon-edit"
+                plain="true">编辑</a> <a href="#" class="easyui-linkbutton" iconcls="icon-remove" onclick="doRemove()"
+                    plain="true">删除</a> <a href="#" class="easyui-linkbutton" iconcls="icon-reload" plain="true"
+                        onclick="doReload()">刷新数据</a>
+    </div>
+    <div>
+        <label for="m">
+            检索</label>
+        <label for="m">
+            会员姓名：</label>
+        <input id="memName" class="easyui-validatebox" data-options="required:true,validType:''" />
+        <a id="btn" href="#" onclick="validSearchParam()" class="easyui-linkbutton" data-options="iconCls:'icon-search'">
+            搜索</a>
+    </div>
+</div>
+<div id="win" class="easyui-window" title="新增会员" style="width: 380px; height: 270px"
+    data-options="iconCls:'icon-add',modal:true,collapsible:false">
+    <div style="padding: 10px 0 10px 60px">
+        <form id="ff" name="form1" method="post">
+        <table>
+            <tr>
+                <td>
+                    会员名称:<input type="hidden" name="memID" />
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="memName" data-options="required:true"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    性别:
+                </td>
+                <td>
+                    <select class="easyui-combobox" name="memSex" data-options="required:true">
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    状态:
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="memStatus" data-options="required:true"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    证件号:
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="memIdNum" data-options="required:true"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    手机号码:
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="memCellPhone" data-options="required:true"></input>
+                </td>
+            </tr>
+        </table>
+        </form>
+        <div style="text-align: center; padding: 5px">
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">提交</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">重置</a>
+        </div>
+    </div>
+</div>

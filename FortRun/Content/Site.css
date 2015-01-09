@@ -1,0 +1,82 @@
+html
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+}
+label.checkbox
+{
+    padding-left: 24px;
+    cursor: pointer;
+    background: url('images/checkbox.png') no-repeat left -21px;
+    line-height: 22px;
+    height: 21px;
+    display: inline-block;
+}
+label.checked
+{
+    background-position: left 100%;
+}
+label.disabled
+{
+    background-position: left 0px;
+}
+
+.hRadio
+{
+    padding-left: 22px;
+    display: inline-block;
+    background: transparent url('images/radio.png') no-repeat left top;
+    height: 19px;
+    line-height: 20px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.hRadio_Checked
+{
+    background-position: left bottom;
+}
+.logo
+{
+    float: left;
+    background-image: url('./images/logo.jpg');
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 70px;
+}
+.systitle
+{
+    margin-top: 20px;
+    float: left;
+    font-size: 20px; /*font-family: Î¢ÈíÑÅºÚ;     font-weight: bold;*/
+}
+.sysuserinfo
+{
+    margin-right: 20px;
+    margin-top: 50px;
+    float: right;
+}
+.main_index_west_ul
+{
+    padding: 0;
+    margin: 0;
+}
+.main_index_west_ul a
+{
+    margin-left: 10px;
+    color: #0000FF;
+    font-size: 13px;
+    font-family: Î¢ÈíÑÅºÚ;
+    text-decoration: none;
+    line-height: 10px;
+}
+.main_index_west_ul li
+{
+    list-style-type: none;
+    margin: 10px;
+}

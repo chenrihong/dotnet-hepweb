@@ -1,0 +1,116 @@
+﻿ .screenLockerBg
+        {
+            background: none repeat scroll 0 0 #748189;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .screenToLockerBg
+        {
+            background: none repeat scroll 0 0 #000000;
+            height: 100%;
+            left: 0;
+            opacity: 0.5;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .screenLockerBgIframe
+        {
+            background: none repeat scroll 0 0 #000000;
+            height: 100%;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .screenLocker .lockerPwdInput
+        {
+            clear: left;
+            padding-left: 40px;
+            text-align: left;
+        }
+        .screenLocker div
+        {
+            padding: 3px 0;
+            text-align: center;
+        }
+        .screenLocker input
+        {
+            height: 18px;
+            line-height: 18px;
+            margin-left: 10px;
+        }
+        .screenLocker .tipTitle
+        {
+            padding: 20px 0 10px 40px;
+            text-align: left;
+        }
+        .screenLocker .tip
+        {
+            color: red;
+            height: 18px;
+        }
+        .screenLocker .tip, .screenLocker .tip2
+        {
+            padding: 0;
+        }
+        .screenLocker .tip2
+        {
+            padding-bottom: 10px;
+        }
+        html.ie6_0 .screenLocker .tip2, html.ie7_0 .screenLocker .tip2
+        {
+            padding-bottom: 5px;
+        }
+        .screenLocker .userInfo
+        {
+            padding: 20px 0 10px;
+        }
+        .screenLocker .userInfo img
+        {
+            background: none repeat scroll 0 0 #FFFFFF;
+            border: 1px solid #999999;
+            box-shadow: 1px 1px 3px #666666;
+            display: block;
+            height: 40px;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            padding: 1px;
+            width: 40px;
+        }
+        .screenLocker #unLockInputArea
+        {
+            display: none;
+        }
+        .screenLocker #unLockButtonArea
+        {
+            padding-bottom: 18px;
+            text-align: center;
+        }
+        .screenLocker #unLockButton
+        {
+            background: url("/Content/images/button.png") no-repeat scroll 0 0 transparent;
+            border: 0 none;
+            color: #333333;
+            cursor: pointer;
+            display: inline-block;
+            height: 23px;
+            line-height: 23px;
+            margin-left: 10px;
+            text-align: center;
+            width: 66px;
+        }
+        #unLockControlArea
+        {
+            left: 0;
+            padding: 0;
+        }
+        .screenLocker #unLockButton:hover
+        {
+            background: url("/Content/images/button_hover.png") no-repeat scroll 0 0 transparent;
+            color: #FFFFFF;
+        }

@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "HEP平台后登录";
+    Layout = "~/Views/Shared/_bootstrapLayout.cshtml";
+}
+@section Header
+{
+    <style type="text/css">
+        body
+        {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+            font-family: 微软雅黑;
+        }
+        
+        .form-signin
+        {
+            max-width: 300px;
+            padding: 19px 29px 29px;
+            margin: 0 auto 20px;
+            background-color: #fff;
+            border: 1px solid #e5e5e5;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+            -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+            box-shadow: 0 1px 2px rgba(0,0,0,.05);
+        }
+        .form-signin .form-signin-heading, .form-signin .checkbox
+        {
+            margin-bottom: 10px;
+        }
+        .form-signin input[type="text"], .form-signin input[type="password"]
+        {
+            font-size: 16px;
+            height: auto;
+            margin-bottom: 15px;
+            padding: 7px 9px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.alert').hide();
+
+            function onShowWaring(s) {
+                $('#errordesc').text(s);
+                $('.alert').show();
+                return false;
+            }
+
+            $('#setvaluebtn').click(function () {
+                $('input[name=memName]').val('fortrun-008');
+                $('input[name=memPwd]').val('123456');
+            });
+
+            $('#loginbtn').click(function () {
+                var o = {
+                    memName: $('input[name=memName]').val(),
+                    memPwd: $('input[name=memPwd]').val(),
+                    memVerifi: 'not-need',
+                    validationState: true
+                };
+
+                if (o.memName == '') {
+                    o.validationState = onShowWaring('username is requied');
+                } else if (o.memPwd == '') {
+                    o.validationState = onShowWaring('password is requied');
+                }
+                if (!o.validationState)
+                    return;
+
+                var s = '';
+                for (var k in o) {
+                    s += k + "=" + o[k] + '&';
+                }
+                $.ajax({
+                    type: "POST",
+                    url: "/Login/DoLogin",
+                    data: s += "1=1",
+                    success: function (data) {
+                        data = $.parseJSON(data);
+                        if (data.success) {
+                            window.location.href = '/Desktop/Index/' + data.message;
+                        } else {
+                            onShowWaring(data.message);
+                        }
+                    }
+                });
+            });
+
+            $('#setvaluebtn').mouseover(function () {
+                $('#setvaluebtn').tooltip('show');
+            });
+        });
+    </script>
+}
+<div class="container">
+    <form class="form-signin">
+    <h2 class="form-signin-heading">
+        please sign in</h2>
+    <input type="text" name="memName" class="input-block-level" placeholder="username" />
+    <input type="password" name="memPwd" class="input-block-level" placeholder="password" />
+    <div class="alert">
+        <button type="button" class="close" onclick="$('.alert').hide();">
+            &times;</button>
+        <strong>Warning!</strong> <span id="errordesc"></span>
+    </div>
+    <button id="loginbtn" class="btn btn-large btn-primary" type="button">
+        Sign in</button>
+    <button id="setvaluebtn" class="btn btn-large btn-success" type="button" data-toggle="tooltip"
+        title="auto complete the username and password">
+        Auto complete</button>
+    </form>
+</div>

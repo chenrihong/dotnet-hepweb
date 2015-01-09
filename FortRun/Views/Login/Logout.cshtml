@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Logout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Header
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.messager.alert('提示', '您已经退出系统', 'info', function () {
+                window.location.href = '/Login/Index2';
+            });
+        });
+    </script>
+}

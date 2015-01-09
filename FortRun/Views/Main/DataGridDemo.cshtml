@@ -1,0 +1,209 @@
+﻿@{
+    ViewBag.Title = "DataGridDemo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Header
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#datagrid').datagrid({
+                url: "/Main/GetMemData",
+                rownumbers: true,
+                fit: true,
+                singleSelect: true,
+                toolbar: '#toolbar',
+                columns: [[{ field: 'memID', title: '@Html.OutputText("memID".Toi18n())',
+                    width: 100
+                }, { field: 'memName', title: '@Html.OutputText("memName".Toi18n())', width: 100 }, { field: 'memSex',
+                    title: '@Html.OutputText("memSex".Toi18n())', width: 100, align: 'center'
+                }, { field: 'memStatus', title: '@Html.OutputText("memStatus".Toi18n())', width: 100
+                }, { field: 'memIdNum', title: '@Html.OutputText("memIdNum".Toi18n())', width: 100 },
+                    { field: 'memCellPhone', title: '@Html.OutputText("memCellPhone".Toi18n())', width: 100
+                    }, { field: 'memRegisterTime', title: '@Html.OutputText("memRegisterTime".Toi18n())', width: 100
+                    }, { field: 'other', title: '@Html.OutputText("A_Handle".Toi18n())', width: 100,
+                        formatter: function (value, row, index) {
+                            return '<a onclick="doPersonalDetail(\'' + row.memName + '\',\'' + row.memID + '\')" href="javascript:void(0)">详情</a>';
+                        }
+                    }]]
+            });
+
+            $('#win').window('close');
+
+            function doSearch(val) {
+                if (val != '') {
+                    //do search
+                }
+            }
+
+            window.validSearchParam = function () {
+                var val = $('#memName').val();
+                val == '' ? $('#memName').focus() : doSearch(val);
+            };
+            window.doReload = function () {
+                $('#datagrid').datagrid('reload');
+            };
+            window.doAdd = function () {
+                $('#win').window({
+                    title: locale.btn.btn_add
+                });
+                $('#win').window('open');
+            };
+            window.doEdit = function () {
+                var data = $('#datagrid').datagrid('getSelected');
+                if (data) {
+                    $('#ff').form('load', {
+                        memID: data.memID,
+                        memName: data.memName,
+                        memSex: data.memSex,
+                        memStatus: data.memStatus,
+                        memIdNum: data.memIdNum,
+                        memCellPhone: data.memCellPhone
+                    });
+                    $('#win').window({
+                        title: locale.btn.btn_edit
+                    });
+                    $('#win').window('open');
+                } else {
+                    $.messager.alert(locale.msg.msg_title_info, locale.msg.msg_question_edit_null, 'info');
+                }
+            };
+            window.doRemove = function () {
+                var data = $('#datagrid').datagrid('getSelected');
+                if (data) {
+                    $.messager.confirm(locale.msg.msg_title_ques, locale.fn.fn_remove(data.memName), function (r) {
+                        if (r) {
+                            var rowIndex = $('#datagrid').datagrid('getRowIndex', data);
+                            $('#datagrid').datagrid('deleteRow', rowIndex);
+                        }
+                    });
+                } else {
+                    $.messager.alert(locale.msg_title_info, msg_question_remvove_null, 'info');
+                }
+            };
+            window.submitForm = function () {
+                $('#ff').form({
+                    url: '/Main/AddMember',
+                    onSubmit: function () {
+                        return $(this).form('validate');
+                    },
+                    success: function (data) {
+                        var rowdata = {
+                            memID: 9999,
+                            memName: form1.memName.value,
+                            memSex: form1.memSex.value,
+                            memStatus: form1.memStatus.value,
+                            memIdNum: form1.memIdNum.value,
+                            memCellPhone: form1.memCellPhone.value
+                        };
+                        appendRowByAdd(rowdata);
+
+                        data = $.parseJSON(data); //string to json
+                        $.messager.alert(locale.msg.msg_title_info, data.message, 'info');
+                        $('#win').window('close');
+                    }
+                });
+                $('#ff').submit();
+            };
+            window.clearForm = function () {
+                $('#ff').form('clear');
+            };
+
+            function appendRowByAdd(data) {
+                if (data) {
+                    $('#datagrid').datagrid('insertRow', {
+                        index: 0,
+                        row: {
+                            memID: data.memID,
+                            memName: data.memName,
+                            memSex: data.memSex,
+                            memStatus: data.memStatus,
+                            memIdNum: data.memIdNum,
+                            memCellPhone: data.memCellPhone
+                        }
+                    });
+                }
+            }
+        });
+
+        function doPersonalDetail(t, id) {
+            if (t && id && t != id) {
+                var href = "/Personal/PersonalDetail?peronid" + id;
+                window.top.addTab(locale.fn.fn_detail(t), href, 'icon-edit');
+            }
+        }
+    </script>
+}
+<table id="datagrid">
+    <!--datagrid-->
+</table>
+<div id="toolbar" style="padding: 5px; height: auto">
+    <div style="margin-bottom: 5px">
+        <a href="#" onclick="doAdd()" class="easyui-linkbutton" iconcls="icon-add" plain="true">
+            @Html.OutputText("add".Toi18n())</a> <a href="#" class="easyui-linkbutton" onclick="doEdit()"
+                iconcls="icon-edit" plain="true">@Html.OutputText("edit".Toi18n())</a> <a href="#"
+                    class="easyui-linkbutton" iconcls="icon-remove" onclick="doRemove()" plain="true">@Html.OutputText("remove".Toi18n())</a>
+        <a href="#" class="easyui-linkbutton" iconcls="icon-reload" plain="true" onclick="doReload()">@Html.OutputText("reload".Toi18n())</a>
+    </div>
+    <div>
+        <label for="m">
+            @Html.OutputText("memName".Toi18n())：</label>
+        <input id="memName" class="easyui-validatebox" data-options="required:true,validType:''" />
+        <a id="btn" href="#" onclick="validSearchParam()" class="easyui-linkbutton" data-options="iconCls:'icon-search'">
+            @Html.OutputText("search".Toi18n())</a>
+    </div>
+</div>
+<div id="win" class="easyui-window" style="width: 380px; height: 270px" data-options="iconCls:'icon-add',modal:true,collapsible:false">
+    <div style="padding: 10px 0 10px 60px">
+        <form id="ff" name="form1" method="post">
+        <table>
+            <tr>
+                <td>
+                    @Html.OutputText("memName".Toi18n()):<input type="hidden" name="memID" />
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="memName" data-options="required:true"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.OutputText("memSex".Toi18n()):
+                </td>
+                <td>
+                    <select class="easyui-combobox" name="memSex" data-options="required:true">
+                        <option value="男">@Html.OutputText("male".Toi18n())</option>
+                        <option value="女">@Html.OutputText("female".Toi18n())</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.OutputText("memStatus".Toi18n()):
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="memStatus" data-options="required:true"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.OutputText("memIdNum".Toi18n()):
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="memIdNum" data-options="required:true"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.OutputText("memCellPhone".Toi18n()):
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="memCellPhone" data-options="required:true"></input>
+                </td>
+            </tr>
+        </table>
+        </form>
+        <div style="text-align: center; padding: 5px">
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">@Html.OutputText("submit".Toi18n())</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">@Html.OutputText("reset".Toi18n())</a>
+        </div>
+    </div>
+</div>

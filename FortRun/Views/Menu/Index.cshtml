@@ -1,0 +1,193 @@
+﻿@{
+    ViewBag.Title = "菜单列表设置";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Header
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#chklist').hcheckbox();
+            $('#radiolist').hradio();
+            $('#btnOK').click(function () {
+                var checkedValues = new Array();
+                $('#chklist :checkbox').each(function () {
+                    if ($(this).is(':checked')) {
+                        checkedValues.push($(this).val());
+                    }
+                });
+                alert(checkedValues.join(','));
+                alert($('#radiolist :checked').val());
+            });
+
+            function init() {
+                $('#tt').treegrid({
+                    url: '/Menu/GetMenuList/' + window.g_guid,
+                    idField: 'id',
+                    treeField: 'text',
+                    rownumbers: true,
+                    fit: true,
+                    singleSelect: true,
+                    toolbar: '#toolbar',
+                    columns: [[
+                        { title: 'id', field: 'id', hidden: true },
+                        { title: 'text', field: 'text', width: 180 },
+                        { title: 'url', field: 'url', width: 180 }
+                    ]]
+                });
+
+                $('#win').window({
+                    tools: [{
+                        iconCls: 'icon-save',
+                        handler: function () { doWhat(); }
+                    }]
+                });
+            }
+
+            function doWhat() {
+                var menuId = $('#menuId').val();
+                if (typeof menuId == "string" && menuId == "") {
+                    doSaveAdd();
+                } else {
+                    doSaveEdit();
+                }
+            }
+
+            function doSaveAdd() {
+                alert('do save add');
+            }
+
+            function doSaveEdit() {
+                alert('do save edit');
+            }
+
+            init();
+        });
+
+        function doAdd() {
+            $('#win').window({
+                title: 'add',
+                iconCls: 'icon-add',
+                closed: false
+            });
+        }
+
+        function doRemove() {
+            var eui = new $.eui.tg('tt');
+            var nodeid = eui.getNodeId();
+            if (nodeid != -1) {
+                if (eui.getChildNodes(nodeid).length > 0) {
+                    $.messager.confirm('确认', '您确认要删除该节点及其子节点吗？', function (r) {
+                        if (r) {
+                            $('#tt').treegrid('remove', nodeid);
+                        }
+                    });
+                } else {
+                    $('#tt').treegrid('remove', nodeid);
+                }
+            } else {
+                $.messager.alert('提示', '请选择您要删除的记录', 'info');
+            }
+        }
+
+        function doEdit() {
+            $('#win').window({
+                title: 'edit',
+                iconCls: 'icon-edit',
+                closed: false
+            });
+            //load form data
+            $('#menuId').val('588');
+        }
+    </script>
+}
+<div id="tt">
+    <!--treegrid-->
+</div>
+<div id="toolbar" style="padding: 5px; height: auto">
+    <div style="margin-bottom: 5px">
+        <a href="#" onclick="doAdd()" class="easyui-linkbutton" iconcls="icon-add" plain="true">
+            @Html.OutputText("add".Toi18n())</a> <a href="#" class="easyui-linkbutton" onclick="doEdit()"
+                iconcls="icon-edit" plain="true">@Html.OutputText("edit".Toi18n())</a> <a href="#"
+                    class="easyui-linkbutton" iconcls="icon-remove" onclick="doRemove()" plain="true">@Html.OutputText("remove".Toi18n())</a>
+        <a href="#" class="easyui-linkbutton" iconcls="icon-reload" plain="true" onclick="doReload()">@Html.OutputText("reload".Toi18n())</a>
+    </div>
+    <div>
+        <a id="btn" href="#" onclick="validSearchParam()" class="easyui-linkbutton" data-options="iconCls:'icon-search'">
+            @Html.OutputText("search".Toi18n())</a>
+    </div>
+</div>
+<div id="win" class="easyui-window" title="menu-add-edit" style="width: 400px; height: 275px"
+    data-options="resizable:false,modal:true,collapsible:false,closed:true">
+    <form id="ff" method="post">
+    <div style="margin: 20px auto; width: 250px">
+        <table>
+            <tr>
+                <td>
+                    <label for="menuName">
+                        菜单名称：<input id="menuId" name="menuId" type="hidden" />
+                    </label>
+                </td>
+                <td>
+                    <input name="menuName" type="text" class="easyui-validatebox" data-options="required:true,validType:''" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="menuNo">
+                        菜单编号：</label>
+                </td>
+                <td>
+                    <input name="menuNo" type="text" class="easyui-validatebox" data-options="required:true,validType:''" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="memForSystem">
+                        所属子系统：</label>
+                </td>
+                <td>
+                    <select id="memForSystem" name="memForSystem" class="easyui-combobox">
+                        <option value="HEP">HEP后台</option>
+                        <option value="HEP-PHONE">手机查房客户端</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="language">
+                        状态：
+                    </label>
+                </td>
+                <td>
+                    <select id="laguage" name="language" class="easyui-combobox">
+                        <option value="on">启用</option>
+                        <option value="off">停用</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="memPath">
+                        菜单路径：</label>
+                </td>
+                <td>
+                    <input id="memPath" name="memPath" type="text" class="easyui-validatebox" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="menuScope">
+                        操作范围：</label>
+                </td>
+                <td>
+                    <div id="chklist">
+                        <input type="checkbox" value='1' name="menuScope" /><label>平台</label>
+                        <input type="checkbox" value='2' name="menuScope" /><label>集团</label>
+                        <input type="checkbox" value='3' name="menuScope" /><label>门店</label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</div>

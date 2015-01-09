@@ -1,0 +1,170 @@
+﻿@{
+    ViewBag.Title = "HEP平台后登录";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Header
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if ($.browser.msie) {
+                var b = confirm('温馨提示：建议您使用谷歌浏览器以获得更好更快体验，现在下载?');
+                if (b) {
+                    window.open('http://www.google.cn/intl/zh-CN/chrome/browser/', 'win1');
+                }
+            }
+            $.extend($.fn.validatebox.defaults.rules, {
+                verificationcode: {
+                    validator: function (value, param) {
+                        return $('#tips').attr('class') == 'icon-ok';
+                    },
+                    message: '您输入的验证码错误'
+                }
+            });
+            $('#win').window('open');
+        });
+
+        function changecode() {
+            $('#imgVerifi').attr('src', '/Login/VerificationCode?t=' + new Date().getSeconds());
+            $('#memVerifi').val('');
+            $('#tips').removeClass();
+        }
+        function doCheckVerifiCode(val) {
+            if (val) {
+                val = val.toString().trim();
+                if (val.length == 4) {
+                    $.ajax({
+                        type: "POST",
+                        url: "/Login/CheckVerificationCode",
+                        data: "code=" + val,
+                        success: function (msg) {
+                            if (!msg.success) {
+                                $('#tips').show();
+                                $('#tips').attr('class', 'icon-no');
+                                $('#tips').attr('title', '验证码错误');
+                            } else {
+                                $('#tips').show();
+                                $('#tips').attr('class', 'icon-ok');
+                                $('#tips').attr('title', '原密码正确');
+                            }
+                        }
+                    });
+                } else {
+                    $('#tips').show();
+                    $('#tips').attr('class', 'icon-no');
+                    $('#tips').attr('title', '验证码错误');
+                }
+            }
+        }
+        function doLogin() {
+            $('#ff').form({
+                url: '/Login/DoLogin',
+                onSubmit: function () {
+                    if ($('#memVerifi').val().toString().trim().length != 4) {
+                        $.messager.alert('提示', '请填写4位验证码', 'info', function () {
+                            $('#memVerifi').focus();
+                        });
+                    } else {
+                        if ('icon-ok' != $('#tips').attr('class')) {
+                            $('#tips').show();
+                            $('#tips').attr('class', 'icon-no');
+                            $('#tips').attr('title', '验证码错误');
+                            $('#memVerifi').focus();
+                        }
+                    }
+                    return $(this).form('validate') && $('#memVerifi').val().length == 4 && 'icon-ok' == $('#tips').attr('class');
+                },
+                success: function (data) {
+                    data = $.parseJSON(data);
+                    if (data.success) {
+                        window.location.href = '/Main/Index/' + $('#laguage').val() + '/' + data.message;
+                    } else {
+                        $.messager.alert('提示', data.message, 'info', function () {
+                            changecode();
+                        });
+                    }
+                }
+            });
+            $('#ff').submit();
+        }
+        document.onkeydown = function (e) {
+            e = window.event || e;
+            if (e.keyCode == 13 && $(this).form('validate') && $('#memVerifi').val().length == 4 && 'icon-ok' == $('#tips').attr('class')) {
+                doLogin();
+            }
+        };
+    </script>
+    <style type="text/css">
+        tr{ height: 35px;}
+    </style>
+}
+<div id="win" class="easyui-window" title="登录窗" style="width: 400px; height: 325px"
+    data-options="iconCls:'',resizable:false,modal:true,collapsible:false,minimizable:false,maximizable:false,closable:false">
+    <div class="easyui-layout" data-options="fit:true">
+        <div data-options="region:'north',split:false" style="height: 35px;">
+            <h1 style="margin-left: 30px; color: cornflowerblue">
+                HEP酒店快速接待系统 － 后台登录</h1>
+        </div>
+        <div data-options="region:'center'">
+            <form id="ff" method="post">
+            <div style="margin: 20px auto; width: 240px;">
+                <table>
+                    <tr>
+                        <td style="width: 80px;">
+                            <label for="memName">
+                                账 号：
+                            </label>
+                        </td>
+                        <td style="width: 160px;">
+                            <input name="memName" value="fortrun-001" type="text" class="easyui-validatebox"
+                                data-options="required:true,validType:''" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="memPwd">
+                                密 码：</label>
+                        </td>
+                        <td>
+                            <input name="memPwd" value="fortrun-pwd" type="password" class="easyui-validatebox"
+                                data-options="required:true,validType:''" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="memVerifi">
+                                验证码：</label>
+                        </td>
+                        <td>
+                            <input id="memVerifi" name="memVerifi" onblur="doCheckVerifiCode(this.value)" onkeyup="doCheckVerifiCode(this.value)"
+                                style="width: 75px;" type="text" class="easyui-validatebox" />
+                            <img id="imgVerifi" title="单击我可以换一张验证码" src="/Login/VerificationCode" onclick="changecode()" />
+                            <div id="tips" class="icon-no" style="width: 16px; height: 16px; float: right; display: none;cursor: pointer;">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="language">
+                                语 言：
+                            </label>
+                        </td>
+                        <td>
+                            <select id="laguage" name="language">
+                                <option value="zh-CN">简体中文</option>
+                                <option value="zh-TW">繁體中文</option>
+                                <option value="en">English</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a id="btn" href="#" onclick="doLogin()" class="easyui-linkbutton" data-options="iconCls:'icon-ok'">
+                                登录</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>

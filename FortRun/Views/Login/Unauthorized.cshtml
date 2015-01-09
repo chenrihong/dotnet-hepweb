@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "未授权的访问 - 您没有权限访问该页面";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Header
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.messager.alert('提示', '未授权的访问 - 您没有权限访问该页面', 'info', function () {
+                window.location.href = '/Login/Index';
+            });
+        });
+    </script>
+}

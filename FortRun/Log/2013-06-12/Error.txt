@@ -1,0 +1,6 @@
+[2013-06-12 11:47:29.3281] [FortRun.Web.Controllers.BaseController.OnAuthorization] [无GUID的非法访问: /Login/Index2 ]
+[2013-06-12 11:47:32.4912] [FortRun.Web.Controllers.BaseController.OnAuthorization] [无GUID的非法访问: /Login/VerificationCode ]
+[2013-06-12 11:47:33.8873] [FortRun.Web.Controllers.BaseController.OnAuthorization] [无GUID的非法访问: /Login/VerificationCode ]
+[2013-06-12 11:47:39.4556] [FortRun.Web.Controllers.BaseController.OnAuthorization] [无GUID的非法访问: /Login/CheckVerificationCode ]
+[2013-06-12 11:47:40.6457] [FortRun.Web.Controllers.BaseController.OnAuthorization] [无GUID的非法访问: /Login/CheckVerificationCode ]
+[2013-06-12 11:47:41.0367] [FortRun.Web.Controllers.BaseController.OnAuthorization] [无GUID的非法访问: /Login/DoLogin ]

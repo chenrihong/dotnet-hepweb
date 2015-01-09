@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary>
+  <Language Key="zh-TW" Value="繁體中文">
+    <Module Key="natural" Value="自然屬性">
+      <Property Key="province" Value="省份" />
+      <Property Key="city" Value="城市" />
+      <Property Key="county" Value="區縣" />
+      <Property Key="male" Value="男" />
+      <Property Key="female" Value="女" />
+      <Property Key="on" Value="啟用" />
+      <Property Key="off" Value="停用" />
+    </Module>
+
+    <Module Key="system" Value="系統模塊">
+      <Property Key="add" Value="新增" />
+      <Property Key="remove" Value="刪除" />
+      <Property Key="edit" Value="編輯" />
+      <Property Key="search" Value="搜索" />
+      <Property Key="reload" Value="重載數據" />
+      <Property Key="submit" Value="提交" />
+      <Property Key="reset" Value="重置" />
+      <Property Key="remark" Value="備註" />
+    </Module>
+
+    <Module Key="UserBaseModel" Value="系統用戶模塊">
+      <Property Key="memID" Value="會員ID" />
+      <Property Key="memName" Value="會員姓名" />
+      <Property Key="memPwd" Value="密碼" />
+      <Property Key="memSex" Value="性別" />
+      <Property Key="memStatus" Value="狀態" />
+      <Property Key="memIdNum" Value="身份證號碼" />
+      <Property Key="memCellPhone" Value="手機號碼" />
+      <Property Key="memRegisterTime" Value="註冊時間" />
+    </Module>
+
+    <Module Key="ResourceModel" Value="系統資源設置模塊">
+      <Property Key="resID" Value="資源ID" />
+      <Property Key="resCategory" Value="資源類別" />
+      <Property Key="resName" Value="資源名稱" />
+      <Property Key="resSystem" Value="所屬系統" />
+      <Property Key="resScope" Value="範圍" />
+      <Property Key="resStatus" Value="啟用狀態" />
+    </Module>
+
+    <Module Key="Hotel-Group" Value="酒店設置-集團管理">
+      <Property Key="GroupID" Value="集團ID" />
+      <Property Key="GroupName" Value="酒店集團" />
+      <Property Key="GroupAccount" Value="集團賬號" />
+      <Property Key="GroupAccStatus" Value="賬號狀態" />
+      <Property Key="GroupHotelNum" Value="酒店數量" />
+    </Module>
+
+    <Module Key="Hotel-Hotel" Value="酒店設置-酒店管理">
+      <Property Key="HotelID" Value="酒店ID" />
+      <Property Key="HotelName" Value="酒店名稱" />
+      <Property Key="HotelAccount" Value="酒店帳號" />
+      <Property Key="HotelAccStatus" Value="帳號狀態" />
+      <Property Key="HotelHepNum" Value="Hep終端數量" />
+    </Module>
+  </Language>
+</ResourceDictionary>

@@ -1,0 +1,270 @@
+﻿@{
+    ViewBag.Title = "角色信息";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Header
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#datagrid').datagrid({
+                url: "/Role/GetRoleData",
+                rownumbers: true,
+                fit: true,
+                singleSelect: true,
+                toolbar: '#toolbar',
+                columns: [[{ field: 'roleId', title: '角色编号',
+                    width: 100
+                }, { field: 'roleName', title: '角色名称', width: 100
+                }, { field: 'roleSubSystem', title: '所属子系统', width: 100 }, { field: 'roleLevel', title: '角色级别', width: 100, align: 'center'
+                }, { field: 'roleStatus', title: '角色状态', width: 100,
+                    formatter: function (value, row, index) {
+                        return value ? "启用" : "锁定";
+                    }
+                }, { field: 'do', title: '操作', width: 100,
+                    formatter: function (value, row, index) {
+                        return '<a onclick="doPersonalDetail(\'' + row.roleName + '\',\'' + row.roleId + '\')" href="javascript:void(0)">详情</a>';
+                    }
+                }]]
+            });
+
+            $('#win').window('close');
+            $('#win-menu').window('close');
+
+            function doSearch(val) {
+                if (val != '') {
+                    //do search
+                }
+            }
+
+            window.validSearchParam = function () {
+                var val = $('#roleName').val();
+                val == '' ? $('#roleName').focus() : doSearch(val);
+            };
+            window.doReload = function () {
+                $('#datagrid').datagrid('reload');
+            };
+            window.doAdd = function () {
+                $('#win').window({
+                    title: '新增角色'
+                });
+                $('#win').window('open');
+            };
+            window.doEdit = function () {
+                var data = $('#datagrid').datagrid('getSelected');
+                if (data) {
+                    $('#ff').form('load', {
+                        roleId: data.roleId,
+                        roleName: data.roleName,
+                        roleSubSystem: data.roleSubSystem,
+                        roleStatus: data.roleStatus,
+                        roleLevel: data.roleLevel
+                    });
+                    $('#win').window({
+                        title: '编辑角色[' + data.roleId + ']'
+                    });
+                    $('#win').window('open');
+                } else {
+                    $.messager.alert('提示', '请选中要编辑的行', 'info');
+                }
+            };
+            window.doRemove = function () {
+                var data = $('#datagrid').datagrid('getSelected');
+                if (data) {
+                    $.messager.confirm('确认', '您确认要删除角色[' + data.roleName + ']吗？', function (r) {
+                        if (r) {
+                            var rowIndex = $('#datagrid').datagrid('getRowIndex', data);
+                            $('#datagrid').datagrid('deleteRow', rowIndex);
+                        }
+                    });
+                } else {
+                    $.messager.alert('提示', '请选择您要删除的对象', 'info');
+                }
+            };
+            window.submitForm = function () {
+                $('#ff').form({
+                    url: '/Main/AddMember',
+                    onSubmit: function () {
+                        return $(this).form('validate');
+                    },
+                    success: function (data) {
+                        var rowdata = {
+                            roleId: 9999,
+                            roleName: form1.roleName.value,
+                            roleSubSystem: form1.roleSubSystem.value,
+                            roleStatus: form1.roleStatus.value,
+                            roleLevel: form1.roleLevel.value,
+                            memCellPhone: form1.memCellPhone.value
+                        };
+                        appendRowByAdd(rowdata);
+
+                        data = $.parseJSON(data); //string to json
+                        $.messager.alert('提示', data.message, 'info');
+                        $('#win').window('close');
+                    }
+                });
+                $('#ff').submit();
+            };
+            window.clearForm = function () {
+                $('#ff').form('clear');
+            };
+
+            function appendRowByAdd(data) {
+                if (data) {
+                    $('#datagrid').datagrid('insertRow', {
+                        index: 0,
+                        row: {
+                            roleId: data.roleId,
+                            roleName: data.roleName,
+                            roleSubSystem: data.roleSubSystem,
+                            roleStatus: data.roleStatus,
+                            roleLevel: data.roleLevel,
+                            memCellPhone: data.memCellPhone
+                        }
+                    });
+                }
+            }
+        });
+
+        function doPersonalDetail(t, id) {
+            if (t && id && t != id) {
+                var href = "/Personal/PersonalDetail?peronid" + id;
+                window.top.addTab('角色(' + t + ')详情', href, 'icon-edit');
+            }
+        }
+
+        /*关联菜单权限*/
+
+        function doMenu() {
+            var dg = new $.eui.dg('datagrid');
+            var data = dg.getSelectedRow();
+            if (data) {
+                $('#win-menu').window({
+                    title: data.roleName + ' - 菜单权限设置'
+                });
+                bindMenuData();
+                $('#win-menu').window('open');
+            } else {
+                $.messager.alert('提示', '请选择一条记录后再进行操作', 'info');
+            }
+        }
+
+        /*csharp checked id key word. translate ischecked to checked*/
+
+        function bindMenuData() {
+            $.ajax({
+                type: "POST",
+                url: "/Menu/GetMenuList/" + window.g_guid,
+                data: "",
+                success: function (msg) {
+                    if (msg) {
+                        msg = $.parseTreeData(msg.rows);
+                        $('#menutree').tree({
+                            data: msg
+                        });
+                    } else {
+                        $.messager.alert('错误', '菜单加载不成功', 'error');
+                    }
+                }
+            });
+        }
+
+        function getChecked() {
+            var nodes = $('#menutree').tree('getChecked');
+            var s = '';
+            for (var i = 0; i < nodes.length; i++) {
+                if (s != '') s += ',';
+                s += nodes[i].text;
+            }
+            alert(s);
+        }
+        //url:'/Main/GetMenu/@ViewBag.Guid',
+    </script>
+}
+<table id="datagrid">
+    <!--datagrid-->
+</table>
+<div id="toolbar" style="padding: 5px; height: auto">
+    <div style="margin-bottom: 5px">
+        <a href="#" onclick="doAdd()" class="easyui-linkbutton" iconcls="icon-add" plain="true">
+            添加</a> <a href="#" class="easyui-linkbutton" onclick="doEdit()" iconcls="icon-edit"
+                plain="true">编辑</a> <a href="#" class="easyui-linkbutton" iconcls="icon-remove" onclick="doRemove()"
+                    plain="true">删除</a> <a href="#" class="easyui-linkbutton" iconcls="icon-reload" plain="true"
+                        onclick="doReload()">刷新数据</a> <a href="#" class="easyui-linkbutton" iconcls="icon-ok"
+                            plain="true" onclick="doMenu()">关联菜单</a>
+    </div>
+    <div>
+        <label for="m">
+            检索</label>
+        <label for="m">
+            角色姓名：</label>
+        <input id="roleName" class="easyui-validatebox" data-options="required:true,validType:''" />
+        <a id="btn" href="#" onclick="validSearchParam()" class="easyui-linkbutton" data-options="iconCls:'icon-search'">
+            搜索</a>
+    </div>
+</div>
+<div id="win" class="easyui-window" title="新增角色" style="width: 380px; height: 270px"
+    data-options="iconCls:'icon-add',modal:true,collapsible:false">
+    <div style="padding: 10px 0 10px 60px">
+        <form id="ff" name="form1" method="post">
+        <table>
+            <tr>
+                <td>
+                    角色名称:<input type="hidden" name="roleId" />
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="roleName" data-options="required:true"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    所属子系统:
+                </td>
+                <td>
+                    <select class="easyui-combobox" name="roleSubSystem" data-options="required:true">
+                        <option value="HEP后台">HEP后台</option>
+                        <option value="其他">其他</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    角色状态:
+                </td>
+                <td>
+                    <select class="easyui-combobox" name="roleStatus" data-options="required:true">
+                        <option value="true">正常</option>
+                        <option value="false">锁定</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    角色级别:
+                </td>
+                <td>
+                    <select class="easyui-combobox" name="roleLevel" data-options="required:true">
+                        <option value="HEP后台">平台级</option>
+                        <option value="集团级">集团级</option>
+                        <option value="门店级">门店级</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        </form>
+        <div style="text-align: center; padding: 5px">
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">提交</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">重置</a>
+        </div>
+    </div>
+</div>
+<div id="win-menu" class="easyui-window" title="菜单权限设置" style="width: 380px; height: 270px"
+    data-options="iconCls:'icon-save',modal:true,collapsible:false,tools:'#tls'">
+    <ul id="menutree" class="easyui-tree" data-options="
+        animate:true,
+        checkbox:true,
+        lines:true">
+    </ul>
+</div>
+<div id="tls">
+    <a href="#" onclick="getChecked();" title="保存修改" class="icon-save"></a>
+</div>

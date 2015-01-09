@@ -1,0 +1,202 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>复创智能－后台管理系统</title>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/jquery-easyui-1.3.2/themes/default/easyui.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/jquery-easyui-1.3.2/themes/icon.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/jquery-easyui-1.3.2/demo/demo.css")" />
+    <script type="text/javascript" src="@Url.Content("~/Content/jquery-easyui-1.3.2/jquery-1.8.0.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/jquery-easyui-1.3.2/jquery.easyui.min.js")"></script>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Site.css")" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            window.g_isLogout = false;
+            window.g_guid = '@ViewBag.Guid';
+            window.g_userid = '@ViewBag.UserId';
+            window.g_username = '@ViewBag.UserName';
+            var menuData = [];
+            window.addTab = function (title, href, tabCls) {
+                if ($('#easyui-tabs').tabs('exists', title)) {
+                    $('#easyui-tabs').tabs('select', title);
+                } else {
+                    var content;
+                    if (href) {
+                        content = '<iframe frameborder="0"  src="' + href + '" style="width:100%;height:99%;"></iframe>';
+                    } else {
+                        content = '';
+                    }
+                    $('#easyui-tabs').tabs({
+                        scrollIncrement: 100
+                    }).tabs('add', {
+                        title: title,
+                        content: content,
+                        closable: true,
+                        iconCls: tabCls
+                    });
+                }
+            };
+            window.getTabTitle = function () {
+                var pp = $('#easyui-tabs').tabs('getSelected');
+                var tab = pp.panel('options').tab;
+                var t = tab[0].textContent;
+                return t;
+            };
+            window.removeTab = function () {
+                var tab = $('#easyui-tabs').tabs('getSelected');
+                var index = $('#easyui-tabs').tabs('getTabIndex', tab);
+                $('#easyui-tabs').tabs('close', index);
+            };
+            window.doLogout = function () {
+                $.messager.confirm('询问', '您确认要退出登录吗？', function (r) {
+                    if (r) {
+                        if (t) {
+                            clearInterval(t);
+                        }
+                        $.ajax({
+                            type: "POST",
+                            url: '/Login/ClearUserCache/' + g_guid,
+                            data: 'guid=' + g_guid,
+                            success: function (msg) {
+                                if (msg.success) {
+                                    g_isLogout = true;
+                                    window.location.href = '/Login/Index';
+                                }
+                            },
+                            error: function () {
+                                $.messager.alert(locale.msg.msg_title_info, '与服务器失去连接，请稍后重试', 'info');
+                            }
+                        });
+                    }
+                });
+            };
+
+            window.onbeforeunload = function (evt) {
+                if (!$.browser.msie) {
+                    if (!g_isLogout) {
+                        evt = window.event || evt;
+                        if (evt) {
+                            evt.returnValue = "确认离开?";
+                        }
+                        return ("确认离开?");
+                    }
+                }
+            };
+
+            function getChildrenNode(menuChildren) {
+                var htmlNode = '';
+                if (typeof (menuChildren) == 'object' && menuChildren != null && menuChildren.length > 0) {
+                    htmlNode = '<ul class="main_index_west_ul">';
+                    for (var i = 0; i < menuChildren.length; i++) {
+                        htmlNode += '<li><a onclick="addTab(\'' + menuChildren[i].text + '\',\'' + menuChildren[i].url + '\',\'\')" href="javascript:void(0)">' + menuChildren[i].text + '</a></li>';
+                    }
+                    htmlNode += '</ul>';
+                }
+                return htmlNode;
+            }
+
+            function addNode(elementId, menuName, menuChildren, bselected) {
+                if (elementId != '' && menuName != '' && menuName != null) {
+                    $('#' + elementId).accordion('add', {
+                        title: menuName,
+                        content: getChildrenNode(menuChildren),
+                        selected: bselected
+                    });
+                }
+            }
+
+            function initMenu(menu) {
+                if (menu.length > 0) {
+                    for (var i = 0; i < menu.length; i++) {
+                        addNode('menubox', menu[i].text, menu[i].children, i == menu.length - 1);
+                    }
+                } else {
+                    alert('菜单未加载');
+                }
+            }
+            
+            //timer:
+            var t = setInterval(timerFn, 10000);
+
+            function timerFn() {
+                var guid = '@ViewBag.Guid';
+                var userid = '@ViewBag.UserId';
+                if (guid && guid.length > 0) {
+                    $.ajax({
+                        type: "POST",
+                        url: "/Public/TimerCheckLogin/" + guid,
+                        data: "guid=" + guid + "&userid=" + userid,
+                        success: function (msg) {
+                            if (!msg.success) {
+                                $.messager.alert('提示', msg.message, 'info', function () {
+                                    g_isLogout = true;
+                                    window.location.href = '/Login/Index';
+                                });
+                                clearInterval(t);
+                            }
+                        },
+                        error: function (result) {
+                            $.messager.alert('提示', '您和服务器的连接已经中断', 'info', function () {
+                                g_isLogout = true;
+                                window.location.reload();
+                            });
+                            clearInterval(t);
+                        }
+                    });
+                }
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "/Menu/GetMenuList/" + g_guid,
+                data: "",
+                success: function (msg) {
+                    if (msg) {
+                        menuData = msg.rows;
+                        initMenu(menuData);
+                    } else {
+                        $.messager.alert('错误', '菜单加载不成功', 'error');
+                    }
+                }
+            });
+        });
+        
+        function swichLang(lang) {
+            window.location.href = '/Main/Index/' + lang + '/' + g_guid;
+        }
+    </script>
+</head>
+<body class="easyui-layout" style="margin: 1px auto; padding: 0px; width: 99%; height: 99%;">
+    <div data-options="region:'north',split:true" style="height: 79px">
+        <div class="logo">
+        </div>
+        <div class="systitle">
+            复创智能－后台管理系统</div>
+        <div class="sysuserinfo">
+            <a href="#" onclick="swichLang('zh-CN')">简体中文</a> | <a href="#" onclick="swichLang('zh-TW')">
+                繁體中文</a> | <a href="#" onclick="swichLang('en')">English</a> 您好，<span id="userName">@ViewBag.UserName（@ViewBag.UserId）</span>
+            ｜ <a href="javascript:void(0)" onclick="doLogout()">注销</a>
+        </div>
+    </div>
+    <div data-options="region:'south',split:true" style="height: 40px; text-align: center;">
+        复创自助©2013<br />
+        Copyright © 2013 <a href="http://www.fortrun.com" target="_blank">www.fortrun.com</a>
+    </div>
+    <div data-options="region:'west',split:true" title="功能导航" style="width: 180px;">
+        <div id="menubox" class="easyui-accordion" data-options="fit:true,border:false">
+            <!--Menu-->
+        </div>
+    </div>
+    <div data-options="region:'center',title:'Main Title',iconCls:'icon-ok',noheader:true">
+        <div id="easyui-tabs" class="easyui-tabs" data-options="fit:true,border:false,plain:true">
+            <div title="<font color='red'>桌面</forn>" data-options="" style="padding: 10px;">
+                <h3>
+                    欢迎您，@ViewBag.UserName（@ViewBag.UserId）</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

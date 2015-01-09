@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "用户在线列表";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Header
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var toolbar = [
+             {
+                 text: '刷新数据',
+                 iconCls: 'icon-reload',
+                 handler: function () { $('#datagrid').datagrid('reload'); }
+             }];
+
+            $('#datagrid').datagrid({
+                url: "/Main/GetOnline",
+                rownumbers: true,
+                fit: true,
+                singleSelect: true,
+                toolbar: toolbar,
+                columns: [[{ field: 'UserId', title: '会员ID', width: 100
+                }, { field: 'UserName', title: '会员姓名', width: 100
+                }, { field: 'LoginTime', title: '登录时间', width: 150,
+                    formatter: function (value, row, index) {
+                        return $.parseDateTime(value, true);
+                    }
+                }, { field: 'ActionTime', title: '最后操作时间', width: 150,
+                    formatter: function (value, row, index) {
+                        return $.parseDateTime(value, true);
+                    }
+                }, { field: 'ActionPath', title: '最后操作路径', width: 300
+                }]]
+            });
+        });
+    </script>
+}
+<table id="datagrid">
+    <!--datagrid-->
+</table>

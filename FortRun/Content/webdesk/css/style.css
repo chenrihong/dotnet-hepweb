@@ -1,0 +1,5266 @@
+﻿.EIM_loading
+{
+    background: url("../images/loading.gif") no-repeat scroll 1px 2px transparent;
+    color: #CCCCCC;
+    cursor: default;
+    height: 16px;
+    line-height: 16px;
+    margin: auto;
+    overflow: hidden;
+    padding: 2px 0 2px 20px;
+    width: 56px;
+}
+.clickable
+{
+    cursor: pointer;
+}
+.clickable:hover
+{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.clickdisable
+{
+    cursor: default;
+    text-decoration: none;
+}
+.clickdisable:hover
+{
+    cursor: default;
+    text-decoration: none;
+}
+.EIM_mainBar
+{
+    display: none;
+    float: right;
+    height: auto;
+    margin: 1px 5px 0 0;
+    width: 30px;
+}
+.EIM_startButton
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -25px -82px transparent;
+    cursor: pointer;
+    display: none;
+    height: 22px;
+    margin: 4px;
+    text-indent: -999em;
+    width: 22px;
+}
+.EIM_startButtonOnline
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll 3px -82px transparent;
+    cursor: pointer;
+    height: 22px;
+    margin: 4px;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 22px;
+}
+.EIM_infoShow
+{
+    display: none;
+    float: left;
+    margin: 0 0 0 3px;
+}
+.EIM_msgBoxButton
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll 29px -239px transparent;
+    cursor: pointer;
+    display: none;
+    height: 22px;
+    margin: 4px;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 22px;
+}
+.EIM_avatarInMsgBoxButton
+{
+    background: none repeat scroll 0 0 white;
+    border: 0 none;
+    height: 20px;
+    margin: 0;
+    overflow: hidden;
+    padding: 1px;
+    width: 20px;
+}
+.EIM_jumpUp .EIM_avatarInMsgBoxButton
+{
+    display: none;
+}
+.unreadMsgInMsgBoxButton
+{
+    display: none;
+    margin: 0 0 0 25px;
+}
+.EIM_myPanel
+{
+    background: url("../images/sprite.png") no-repeat scroll 0 -355px transparent;
+    height: 55px;
+    overflow: hidden;
+    padding: 10px 8px;
+    position: relative;
+}
+.EIM_myPanel_noLogin
+{
+    margin: 4px;
+}
+.EIM_myAvatar
+{
+    background: #fff;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 53px;
+    overflow: hidden;
+    padding: 1px;
+    position: relative;
+    width: 53px;
+}
+.EIM_myAvatar_offline
+{
+    opacity: 0.5;
+}
+.EIM_myInfo
+{
+    height: 23px;
+    margin: 3px 0 0 62px;
+    overflow: hidden;
+}
+.EIM_myState
+{
+    display: none;
+}
+.EIM_myNick
+{
+    color: #030303;
+    cursor: default;
+    float: left;
+    font-weight: bold;
+    height: 16px;
+    line-height: 16px;
+    overflow: hidden;
+    width: 150px;
+}
+.EIM_myService
+{
+    height: 22px;
+    margin: 3px 0 0 62px;
+    width: 200px;
+}
+.eIM_mypanel_toolbar
+{
+    height: 20px;
+    margin: 2px 0 4px;
+    display: none;
+}
+.eIM_mypanel_toolbar_button
+{
+    float: left;
+    height: 18px;
+    left: 1px;
+    margin: 0 4px 0 2px;
+    position: relative;
+    top: 1px;
+    width: 18px;
+}
+.eIM_mypanel_toolbar_button:hover
+{
+    background: url("../images/hover.png") repeat-x scroll 0 0 transparent;
+    border: 1px solid #B3B3B3;
+    left: 0;
+    margin-right: 2px;
+    top: 0;
+}
+.eIM_mypanel_toolbar_icon
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -2px -352px transparent;
+    float: left;
+    height: 16px;
+    margin: 1px;
+    width: 16px;
+}
+.eIM_mypanel_toolbar_qzone
+{
+    background-position: -2px -352px;
+}
+.eIM_mypanel_toolbar_mail
+{
+    background-position: -22px -352px;
+}
+.eIM_mypanel_toolbar_weibo
+{
+    background-position: -42px -352px;
+}
+.eIM_mypanel_toolbar_news
+{
+    background-position: -62px -352px;
+}
+.eIM_mypanel_toolbar_money
+{
+    background-position: -82px -352px;
+}
+.eIM_mypanel_toolbar_pengyou
+{
+    background-position: -102px -352px;
+}
+.eIM_mypanel_toolbar_harddisk
+{
+    background-position: -122px -352px;
+}
+.EIM_mySignature_wraper
+{
+    color: #000000;
+    height: 20px;
+    left: 1px;
+    overflow: hidden;
+    position: relative;
+    top: 1px;
+}
+.EIM_mySignature_wraper:hover
+{
+    border: 1px solid #756688;
+    background: url("../images/sprite.png?t=20111011001") repeat-x 0 -140px;
+    left: 0;
+    top: 0;
+}
+#EIM_MySignature
+{
+    background: none repeat scroll 0 50% transparent;
+    border: 0 none;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    margin: 0;
+    outline: 0 none;
+}
+input#EIM_MySignature
+{
+    width: 100%;
+}
+.EIM_MySignature_hover
+{
+    background: url("../images/hover.png") repeat-x scroll 0 0 transparent;
+    border: 1px solid #B3B3B3;
+    left: 0;
+    top: 0;
+}
+.EIM_mySignature_wraper.EIM_MySignature_edit #EIM_MySignature
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    cursor: text;
+}
+.EIM_mySignature_wraper.EIM_MySignature_edit #EIM_MySignature
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    cursor: text;
+}
+.EIM_mainPanel
+{
+    overflow: hidden;
+    position: relative;
+}
+.ie6_0 .EIM_mainPanel
+{
+    height: 100%;
+}
+.EIM_title
+{
+    display: none;
+    height: 20px;
+    overflow: hidden;
+}
+.EIM_Container .EIM_titleText
+{
+    color: #315180;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: Verdana;
+    font-weight: bold;
+    height: 16px;
+    line-height: 16px;
+    overflow: hidden;
+    padding: 0 5px;
+    width: 50px;
+}
+.EIM_titleText
+{
+    color: #315180;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: Verdana;
+    font-weight: bold;
+    height: 16px;
+    line-height: 16px;
+    overflow: hidden;
+    padding: 0 5px;
+    width: 50px;
+}
+.EIM_betaText
+{
+    color: #333366;
+    float: left;
+    font-size: 9px;
+}
+.EIM_PinDownButton
+{
+    cursor: pointer;
+    display: inline;
+    float: right;
+    height: 15px;
+    margin: 1px 2px 0 0;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 15px;
+}
+.EIM_pinUp
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -42px -60px transparent;
+}
+.EIM_pinDown
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -42px -58px transparent;
+}
+.EIM_feedbackButton
+{
+    color: #333333;
+    float: left;
+    height: 16px;
+    margin: 0 0 0 6px;
+    overflow: hidden;
+}
+.EIM_FeedbackButton2
+{
+    color: #333366;
+    cursor: pointer;
+    display: none;
+    float: right;
+    height: 15px;
+    line-height: 15px;
+    margin: 1px 5px 0 0;
+    overflow: hidden;
+    text-decoration: underline;
+    width: 26px;
+}
+.EIM_myState
+{
+    cursor: pointer;
+    display: none;
+    float: left;
+    height: 20px;
+    overflow: hidden;
+    width: 32px;
+    padding: 3px 0 0 5px;
+}
+.EIM_myState:hover
+{
+    background: url("../images/sprite.png?t=20111011001") no-repeat scroll -30px -580px transparent;
+}
+.EIM_myStateShow
+{
+    float: left;
+    height: 16px;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 15px;
+}
+.EIM_callme
+{
+    background: url("../images/eIM_sprite.png?t=20111011001") no-repeat scroll -71px 3px transparent;
+}
+.EIM_online
+{
+    background: url("../images/eIM_sprite.png?t=20111011001") no-repeat scroll 1px 3px transparent;
+}
+.EIM_away
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -17px 3px transparent;
+}
+.EIM_busy
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -35px 3px transparent;
+}
+.EIM_silent
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -107px 3px transparent;
+}
+.EIM_hidden
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -53px 3px transparent;
+}
+.EIM_offline
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -90px 3px transparent;
+}
+.EIM_qucikButton .quickPanelRunningAppState
+{
+    display: block;
+}
+.EIM_qucikButton .EIM_callme
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -72px 0 transparent;
+}
+.EIM_qucikButton .EIM_online
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll 0 0 transparent;
+}
+.EIM_qucikButton .EIM_away
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -18px 0 transparent;
+}
+.EIM_qucikButton .EIM_busy
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -36px 0 transparent;
+}
+.EIM_qucikButton .EIM_silent
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -108px 0 transparent;
+}
+.EIM_qucikButton .EIM_hidden
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -54px 0 transparent;
+}
+.EIM_qucikButton .EIM_offline
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -90px 0 transparent;
+}
+.appButton_appIcon .EIM_callme
+{
+    background: url("../images/eIM_sprite.gif") no-repeat scroll -72px 0 transparent;
+}
+.appButton_appIcon .EIM_online
+{
+    background: url("../images/eIM_sprite.gif") no-repeat scroll 0 0 transparent;
+}
+.appButton_appIcon .EIM_away
+{
+    background: url("../images/eIM_sprite.gif") no-repeat scroll -18px 0 transparent;
+}
+.appButton_appIcon .EIM_busy
+{
+    background: url("../images/eIM_sprite.gif") no-repeat scroll -36px 0 transparent;
+}
+.appButton_appIcon .EIM_silent
+{
+    background: url("../images/eIM_sprite.gif") no-repeat scroll -108px 0 transparent;
+}
+.appButton_appIcon .EIM_hidden
+{
+    background: url("../images/eIM_sprite.gif") no-repeat scroll -54px 0 transparent;
+}
+.appButton_appIcon .EIM_offline
+{
+    background: url("../images/eIM_sprite.gif") no-repeat scroll -90px 0 transparent;
+}
+.EIM_myStateDown
+{
+    background: url("../images/eIM_sprite.png?t=20111011001") no-repeat scroll 0 -22px transparent;
+    float: left;
+    height: 6px;
+    margin-top: 5px;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 8px;
+}
+.EIM_DisableMyStateSelect
+{
+    cursor: default;
+    width: 16px;
+}
+.EIM_DisableMyStateSelect .EIM_myStateDown
+{
+    display: none;
+}
+.EIM_statePanel
+{
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #666666;
+    display: none;
+    height: 66px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 100px;
+    z-index: 10;
+    font-size: 12px;
+}
+.EIM_statePanel_warp
+{
+    display: none;
+    height: 178px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 57px;
+    top: 20px;
+    width: 102px;
+    z-index: 10;
+}
+.EIM_statePanel_ul
+{
+    display: block;
+    position: static;
+}
+.EIM_statePanel .EIM_statePanel_li
+{
+    cursor: default;
+    display: block;
+    float: left;
+    height: 16px;
+    line-height: 16px;
+    margin: 0;
+    overflow: hidden;
+    padding: 3px 0;
+    width: 100px;
+}
+.EIM_stateSelect_icon
+{
+    float: left;
+    height: 16px;
+    margin: 0 0 0 5px;
+    overflow: hidden;
+    width: 12px;
+}
+.EIM_stateSelect_text
+{
+    margin: 0 0 0 22px;
+}
+.EIM_SetSound
+{
+    border-top: 1px solid #C5C5C5;
+}
+.statusBar_sound_mute .EIM_SetSound_icon
+{
+    background: url("../../../style/images/portal_all_png.png?t=20111011001") no-repeat scroll -102px -458px transparent;
+}
+.ie6_0 .statusBar_sound_mute .EIM_SetSound_icon
+{
+    background: url("../../../style/images/portal_all_gif.gif?t=20111011001") no-repeat scroll -102px -458px transparent;
+}
+.statusBar_sound_open .EIM_SetSound_icon
+{
+    background: none repeat scroll 0 50% transparent;
+}
+.EIM_YellowTips
+{
+    background: none repeat scroll 0 0 #FFFFCC;
+    display: none;
+    height: 20px;
+    overflow: hidden;
+}
+.EIM_YellowTips_CloseButton
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -19px -186px transparent;
+    cursor: pointer;
+    float: right;
+    height: 16px;
+    margin: 2px 2px 0 0;
+    text-indent: -999em;
+    width: 12px;
+}
+.EIM_YellowTips a.EIM_YellowTips_Link
+{
+    float: left;
+    height: 18px;
+    margin: 1px 0 0 2px;
+    overflow: hidden;
+    padding: 0;
+    width: 173px;
+}
+.EIM_SearchBar
+{
+    border: 1px solid #78809a;
+    border-radius: 6px;
+    display: block;
+    height: 20px;
+    margin: 10px 1px 4px;
+    overflow: hidden;
+}
+.EIM_FindBar
+{
+    display: block;
+    height: 30px;
+    overflow: hidden;
+}
+input.EIM_SearchBox
+{
+    border: 0 solid #CCCCCC;
+    color: #999999;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    margin: 0;
+    overflow: hidden;
+    padding: 2px 5px;
+    width: 100%;
+    background: #d2dbf3;
+}
+.ie6_0 input.EIM_SearchBox, .ie7_0 input.EIM_SearchBox
+{
+    float: left;
+}
+input.EIM_SearchBoxHover
+{
+    border: 0 solid #A2D0F1;
+    color: #999999;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    overflow: hidden;
+    padding: 5px 2px;
+    width: 100%;
+}
+.ie6_0 input.EIM_SearchBoxHover, .ie7_0 input.EIM_SearchBoxHover
+{
+    float: left;
+}
+input.EIM_SearchBoxFocus
+{
+    border: 0 solid #A2D0F1;
+    color: #333333;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    overflow: hidden;
+    padding: 5px 2px;
+    width: 100%;
+}
+.ie6_0 input.EIM_SearchBoxFocus, .ie7_0 input.EIM_SearchBoxFocus
+{
+    float: left;
+}
+.EIM_SearchButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -122px -82px transparent;
+    cursor: pointer;
+    display: inline;
+    float: right;
+    height: 17px;
+    margin: -20px 2px 0 0;
+    overflow: hidden;
+    position: relative;
+    text-indent: -999em;
+    width: 17px;
+}
+.ie6_0 .EIM_SearchButton, .ie7_0 .EIM_SearchButton
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -122px -82px transparent;
+}
+.ie8_0 .EIM_SearchButton
+{
+    height: 22px;
+}
+.EIM_SearchButtonHightLight, ie6_0 .EIM_SearchButtonHightLight, .ie7_0 .EIM_SearchButtonHightLight
+{
+    background-position: -142px -82px;
+}
+.EIM_SearchResultPanel_iframeWrap
+{
+    display: none;
+    height: auto;
+    left: 3px;
+    overflow: hidden;
+    position: absolute;
+    top: 83px;
+    width: 182px;
+    z-index: 2;
+}
+.EIM_SearchResultPanel-1
+{
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #666666;
+    display: none;
+    height: auto;
+    left: 3px;
+    overflow: hidden;
+    position: absolute;
+    top: 83px;
+    width: 182px;
+    z-index: 2;
+}
+.EIM_SearchResultPanel
+{
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #666666;
+    display: none;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    width: 182px;
+    z-index: 2;
+}
+.EIM_SearchResultPanel_iframe
+{
+    border-style: none;
+    height: auto;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: auto;
+    z-index: -1;
+}
+.EIM_SearchResultItem
+{
+    cursor: pointer;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    padding: 0 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.EIM_SearchResultItemHover
+{
+    background: none repeat scroll 0 0 #3A92D2;
+    color: #FFFFFF;
+}
+.EIM_SearchResultNo
+{
+    color: #999999;
+    height: 16px;
+    line-height: 16px;
+    overflow: hidden;
+    padding: 5px;
+}
+#EIM_Logining
+{
+    background: url("../images/loading.gif") no-repeat scroll 1px 2px transparent;
+    color: #AAAAAA;
+    cursor: default;
+    height: 16px;
+    left: 50%;
+    line-height: 16px;
+    margin: -10px 0 0 -40px;
+    overflow: hidden;
+    padding: 2px 0 2px 20px;
+    position: absolute;
+    top: 50%;
+    width: 60px;
+}
+.EIM_Logining
+{
+    background: url("../images/loading.gif") no-repeat scroll 1px 2px transparent;
+    color: #AAAAAA;
+    cursor: default;
+    height: 16px;
+    left: 50%;
+    line-height: 16px;
+    margin: -10px 0 0 -40px;
+    overflow: hidden;
+    padding: 2px 0 2px 20px;
+    position: absolute;
+    top: 50%;
+    width: 60px;
+}
+#EIM_Logining_feedback
+{
+    color: #AAAAAA;
+    cursor: default;
+    height: 16px;
+    left: 50%;
+    line-height: 16px;
+    margin: 20px 0 0 -66px;
+    overflow: hidden;
+    padding: 2px 0 2px 20px;
+    position: absolute;
+    top: 50%;
+    width: 90px;
+}
+#EIM_ReLoginPanel
+{
+    color: #AAAAAA;
+    display: none;
+    height: 100px;
+    overflow: hidden;
+    width: 100%;
+}
+#EIM_ReLoginPanel_inner
+{
+    color: #AAAAAA;
+    cursor: default;
+    height: 16px;
+    left: 50%;
+    line-height: 16px;
+    margin: -10px 0 0 -60px;
+    overflow: hidden;
+    padding: 2px 0 2px 20px;
+    position: absolute;
+    top: 50%;
+    width: 100px;
+}
+#EIM_ReLoginButton
+{
+    color: #222266;
+    cursor: pointer;
+    text-decoration: underline;
+}
+#EIM_LoginSuccess
+{
+    display: block;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+.EIM_tab
+{
+    float: left;
+    height: 37px;
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+}
+.EIM_tab .current
+{
+    background: url("../images/eIM_sprite.png?t=20111011001") no-repeat scroll center -125px transparent;
+    cursor: default;
+}
+.EIM_tabBuddyList
+{
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 33%;
+}
+.EIM_tabBuddyList_icon
+{
+    background: url("../images/eIM_sprite.png?t=20111011001") no-repeat scroll -40px -174px transparent;
+    height: 33px;
+    margin: 0 auto;
+    width: 20px;
+}
+.EIM_tabmenu_icon
+{
+    background: url("../images/eIM_sprite.png?t=20111011001") no-repeat scroll 0 -558px transparent;
+    cursor: pointer;
+    display: none;
+    float: right;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 22px;
+}
+.EIM_tabmenu_icon:hover
+{
+    background-color: #CDE6F0;
+}
+.EIM_tab .current .EIM_tabmenu_icon
+{
+    display: none;
+}
+.EIM_tabGroupList
+{
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 33%;
+}
+.EIM_tabGroupList_icon
+{
+    background: url("../images/eIM_sprite.png?t=20111011001") no-repeat scroll -40px -254px transparent;
+    height: 33px;
+    margin: 0 auto;
+    width: 20px;
+}
+.EIM_tabRecentList
+{
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 34%;
+}
+.documentMode_8 .EIM_tabRecentList
+{
+    width: 34%;
+}
+.EIM_tabRecentList_icon
+{
+    background: url("../images/eIM_sprite.png?t=20111011001") no-repeat scroll -40px -334px transparent;
+    height: 33px;
+    margin: 0 auto;
+    width: 20px;
+}
+#EIM_ListContainer
+{
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.EIM_ListBottom
+{
+    background: none repeat scroll 0 0 #cab8e8;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    bottom: 5px;
+    height: 35px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.EIM_mainPanel .accept
+{
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 15px;
+    line-height: 15px;
+    margin: 6px 4px 4px;
+    overflow: hidden;
+    text-indent: 4px;
+}
+.EIM_mainPanel .mask
+{
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 15px;
+    line-height: 15px;
+    margin: 6px 4px 4px;
+    overflow: hidden;
+    text-indent: 4px;
+}
+.EIM_mainPanel .accept_div, .EIM_mainPanel .mask_div
+{
+    display: inline;
+    float: left;
+    height: 16px;
+    overflow: hidden;
+    width: 16px;
+}
+.EIM_mainPanel .accept_div
+{
+    background: url("../images/eIM_sprite.png?t=20111011001") no-repeat scroll -42px -82px transparent;
+}
+.EIM_mainPanel .mask_div
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -62px -82px transparent;
+}
+.ie6_0 .accept_div, .ie7_0 .accept_div
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -42px -82px transparent;
+}
+.ie6_0 .mask_div, .ie7_0 .mask_div
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -62px -82px transparent;
+}
+.ie7_0 .EIM_mainPanel .accept, .ie7_0 .EIM_mainPanel .mask
+{
+    line-height: 18px;
+}
+.searchBuddy
+{
+    color: #333333;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 16px;
+    line-height: 15px;
+    padding: 6px 4px;
+    margin: 5px 5px 5px 20px;
+    overflow: hidden;
+    text-indent: 4px;
+    width: 56px;
+    background: url("../images/eIM_sprite.png?t=20111011001") no-repeat scroll -40px -380px transparent;
+}
+.searchBuddy:hover
+{
+    background-position: -40px -420px;
+}
+.searchBuddy div
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -2px -82px transparent;
+    display: inline;
+    float: left;
+    height: 16px;
+    overflow: hidden;
+    width: 16px;
+}
+.buddy_manage_icon
+{
+    color: #333333;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 16px;
+    line-height: 15px;
+    padding: 6px 4px;
+    margin: 5px;
+    text-indent: 4px;
+    width: 70px;
+    background: url("../images/eIM_sprite.png?t=20111011001") no-repeat scroll -40px -460px transparent;
+}
+.buddy_manage_icon:hover, .message_manage_icon:hover
+{
+    background-position: -40px -500px;
+}
+.buddy_manage_icon div
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -82px -82px transparent;
+    display: inline;
+    float: left;
+    height: 16px;
+    overflow: hidden;
+    width: 16px;
+}
+.message_manage_icon
+{
+    color: #333333;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 16px;
+    line-height: 15px;
+    padding: 6px 4px;
+    margin: 5px;
+    text-indent: 4px;
+    width: 70px;
+    background: url("../images/eIM_sprite.png?t=20111011001") no-repeat scroll -40px -460px transparent;
+}
+.message_manage_icon_div
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -162px -82px transparent;
+    display: inline;
+    float: left;
+    height: 16px;
+    overflow: hidden;
+    width: 16px;
+}
+.ie6_0 .buddy_manage_icon div, .ie7_0 .buddy_manage_icon div, .ie6_0 .searchBuddy div, .ie7_0 .searchBuddy div, .ie6_0 .message_manage_icon_div, .ie7_0 .message_manage_icon_div
+{
+    background-image: url("../images/eIM_sprite_gif.gif?t=20111011001");
+}
+.ie7_0 .searchBuddy, .ie7_0 .buddy_manage_icon
+{
+    line-height: 18px;
+}
+.EIM_mainPanel .createGroup
+{
+    color: #333333;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 15px;
+    line-height: 15px;
+    margin: 6px 4px 4px;
+    overflow: hidden;
+    text-indent: 4px;
+}
+.EIM_mainPanel .createGroup_div, .EIM_mainPanel .searchGroup_div
+{
+    display: inline;
+    float: left;
+    height: 16px;
+    overflow: hidden;
+    width: 16px;
+}
+.EIM_mainPanel .createGroup_div
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -102px -82px transparent;
+}
+.EIM_mainPanel .searchGroup_div
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -2px -82px transparent;
+}
+.EIM_mainPanel .searchGroup
+{
+    color: #333333;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 15px;
+    line-height: 15px;
+    margin: 6px 4px 4px;
+    overflow: hidden;
+    text-indent: 4px;
+}
+.ie6_0 .createGroup_div, .ie7_0 .createGroup_div
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -102px -82px transparent;
+}
+.ie6_0 .searchGroup_div, .ie7_0 .searchGroup_div
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -2px -82px transparent;
+}
+.ie7_0 .createGroup, .ie7_0 .searchGroup
+{
+    line-height: 20px;
+}
+.ie6_0 #EIM_ListContainer
+{
+    height: 100%;
+    overflow: visible;
+}
+.EIM_buddyListPanel
+{
+    background: none repeat scroll 0 0 #F5FAFD;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+}
+.EIM_buddyList
+{
+    bottom: 30px;
+    display: block;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 0;
+    width: 100%;
+}
+.ie7_0 .EIM_buddyList
+{
+    height: 100%;
+    overflow-y: hidden;
+}
+.ie7_0 .EIM_buddyList_noneFlash
+{
+    overflow-y: auto;
+}
+.EIM_listClassHeadExpand, .EIM_onlineClassHeadExpand
+{
+    border: 0 none;
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 3px;
+    overflow: hidden;
+}
+.EIM_listClassHeadCollapsed, .EIM_onlineClassHeadCollapsed
+{
+    border: 0 none;
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 3px;
+    overflow: hidden;
+}
+.EIM_listClassHeadIcon
+{
+    float: left;
+    height: 16px;
+    margin: 7px 0;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 18px;
+}
+.EIM_listClassHeadExpand .EIM_listClassHeadIcon
+{
+    background: url("../images/eIM_sprite.png?t=20111011001") no-repeat scroll 5px -16px transparent;
+}
+.EIM_listClassHeadCollapsed .EIM_listClassHeadIcon
+{
+    background: url("../images/eIM_sprite.png?t=20111011001") no-repeat scroll -12px -16px transparent;
+}
+.EIM_onlineClassHeadExpand .EIM_listClassHeadIcon
+{
+    background: url("../images/eIM_sprite.png?t=20111011001") no-repeat scroll -31px -16px transparent;
+}
+.EIM_onlineClassHeadCollapsed .EIM_listClassHeadIcon
+{
+    background: url("../images/eIM_sprite.png?t=20111011001") no-repeat scroll -48px -16px transparent;
+}
+.EIM_ClassList_RightContainer
+{
+    display: block;
+    overflow: hidden;
+    padding-left: 2px;
+}
+.EIM_flickerHideInBuddyList .EIM_ClassList_RightContainer
+{
+    display: none;
+}
+.EIM_Class_className
+{
+    float: left;
+    width: auto;
+}
+.EIM_listClassBody
+{
+    height: 0;
+    overflow: hidden;
+}
+.ie6_0 .EIM_listClassBody
+{
+    background: none repeat scroll 0 50% transparent;
+}
+.EIM_callmeBuddy, .EIM_onlineBuddy, .EIM_awayBuddy, .EIM_busyBuddy, .EIM_silentBuddy, .EIM_offlineBuddy
+{
+    display: none;
+}
+.EIM_BuddyList_Buddy
+{
+    background: none repeat scroll 0 0 transparent;
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    overflow: hidden;
+    padding: 4px 0 4px 8px;
+    text-decoration: none;
+}
+.EIM_BuddyList_AvatarContainer
+{
+    float: left;
+    height: 22px;
+    overflow: hidden;
+    width: 22px;
+}
+.EIM_jumpUpInBuddyList .EIM_BuddyList_AvatarContainer
+{
+    margin: -2px 0 0;
+}
+img.EIM_BuddyList_Avatar
+{
+    background: none repeat scroll 0 0 white;
+    border: 0 solid #E1E1E1;
+    display: block;
+    float: left;
+    height: 20px;
+    overflow: hidden;
+    padding: 1px;
+    position: static;
+    width: 20px;
+}
+img.EIM_GroupList_Avatar
+{
+    background: none repeat scroll 0 0 white;
+    border: 0 solid #E1E1E1;
+    display: block;
+    float: left;
+    height: 20px;
+    overflow: hidden;
+    padding: 1px;
+    position: static;
+    width: 20px;
+}
+.EIM_BuddyList_State
+{
+    display: inline;
+    float: left;
+    height: 10px;
+    margin: 11px 0 0 -11px;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 10px;
+}
+.EIM_BuddyList_ClientType, .EIM_RecentList_ClientType
+{
+    float: left;
+    height: 22px;
+    overflow: hidden;
+    width: 16px;
+}
+.EIM_BuddyList_ClientType_WebIM
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -4px -143px transparent;
+    float: left;
+    height: 16px;
+    margin: 5px 0 0;
+    overflow: hidden;
+    width: 12px;
+}
+.ie6_0 .EIM_BuddyList_ClientType_WebIM, .ie7_0 .EIM_BuddyList_ClientType_WebIM
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -4px -143px transparent;
+}
+.EIM_BuddyList_ClientType_IMforPad
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -80px -143px transparent;
+    float: left;
+    height: 16px;
+    margin: 5px 0 0;
+    overflow: hidden;
+    width: 16px;
+}
+.ie6_0 .EIM_BuddyList_ClientType_IMforPad, .ie7_0 .EIM_BuddyList_ClientType_IMforPad
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -80px -143px transparent;
+}
+.EIM_BuddyList_ClientType_PhoneIM, .EIM_BuddyList_ClientType_Phone
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -24px -143px transparent;
+    float: left;
+    height: 16px;
+    margin: 5px 0 0;
+    overflow: hidden;
+    width: 12px;
+}
+.ie6_0 .EIM_BuddyList_ClientType_PhoneIM, .ie7_0 .EIM_BuddyList_ClientType_PhoneIM, .ie6_0 .EIM_BuddyList_ClientType_Phone, .ie7_0 .EIM_BuddyList_ClientType_Phone
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -24px -143px transparent;
+}
+.EIM_BuddyList_ClientType_PC
+{
+    float: left;
+    height: 16px;
+    margin: 5px 0 0;
+    overflow: hidden;
+    width: 12px;
+}
+.EIM_Group_ClientType_WebIM
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -4px -143px transparent;
+    float: left;
+    height: 16px;
+    margin: 5px 3px 0 0;
+    width: 12px;
+}
+.ie6_0 .EIM_Group_ClientType_WebIM, .ie7_0 .EIM_Group_ClientType_WebIM
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -4px -143px transparent;
+}
+.EIM_Group_ClientType_Phone
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -24px -143px transparent;
+    float: left;
+    height: 18px;
+    margin: 3px 2px 0 0;
+    overflow: hidden;
+    width: 12px;
+}
+.ie6_0 .EIM_Group_ClientType_Phone, .ie7_0 .EIM_Group_ClientType_Phone
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -24px -143px transparent;
+}
+.chatBox_clientType_WebIM
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -2px -142px transparent;
+    height: 16px;
+    margin: 5px 0 0;
+    overflow: hidden;
+    width: 12px;
+}
+.ie6_0 .chatBox_clientType_WebIM, .ie7_0 .chatBox_clientType_WebIM
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -2px -142px transparent;
+}
+.chatBox_clientType_PhoneIM, .chatBox_clientType_Phone
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -22px -142px transparent;
+    height: 16px;
+    margin: 5px 0 0;
+    overflow: hidden;
+    width: 12px;
+}
+.ie6_0 .chatBox_clientType_PhoneIM, .ie7_0 .chatBox_clientType_PhoneIM, .ie6_0 .chatBox_clientType_Phone, .ie7_0 .chatBox_clientType_PhoneIM
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -22px -142px transparent;
+}
+.chatBox_clientType_IMforPad
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -80px -144px transparent;
+    height: 16px;
+    margin: 5px 0 0;
+    overflow: hidden;
+    width: 12px;
+}
+.ie6_0 .chatBox_clientType_IMforPad, .ie7_0 .chatBox_clientType_IMforPad
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -80px -144px transparent;
+}
+.chatBox_clientType_PC
+{
+    display: none;
+}
+.EIM_callmeBuddy .EIM_BuddyList_State
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -72px 0 yellow;
+}
+.EIM_onlineBuddy .EIM_BuddyList_State
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll 0 0 transparent;
+    height: 0;
+    width: 0;
+}
+.EIM_awayBuddy .EIM_BuddyList_State
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -18px 0 yellow;
+}
+.EIM_busyBuddy .EIM_BuddyList_State
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -36px 0 yellow;
+}
+.EIM_silentBuddy .EIM_BuddyList_State
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -108px 0 yellow;
+}
+.EIM_offlineBuddy .EIM_BuddyList_Avatar
+{
+    opacity: 0.5;
+}
+.EIM_offlineBuddy .EIM_BuddyList_State
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -90px 0 transparent;
+    height: 0;
+    width: 0;
+}
+.EIM_GroupList_State
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -107px 3px transparent;
+    display: inline;
+    float: left;
+    height: 0;
+    margin: 9px 0 0 -11px;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 0;
+}
+.EIM_GroupMask_State
+{
+    height: 15px;
+    width: 11px;
+}
+.EIM_BuddyList_RightContainer
+{
+    margin-right: 10px;
+    overflow: hidden;
+}
+.ie6_0 .EIM_BuddyList_RightContainer
+{
+    margin-right: auto;
+    width: 140px;
+}
+.ie6_0 .EIM_recentListPanel .EIM_BuddyList_RightContainer
+{
+    width: 130px;
+}
+.EIM_BuddyList_Nick, .EIM_BuddyList_Sign, .EIM_GroupList_Bulletin
+{
+    height: 16px;
+    line-height: 16px;
+    margin: 0 0 0 5px;
+    overflow: hidden;
+    padding: 2px 0;
+    text-decoration: none;
+    width: 1000px;
+}
+.EIM_BuddyList_Sign, .EIM_GroupList_Bulletin
+{
+    color: #808080;
+    display: none;
+}
+.EIM_Vip_Nick
+{
+    color: red;
+}
+.EIM_groupListPanel
+{
+    display: none;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    background-color: White;
+}
+.EIM_groupTab
+{
+    background-color: #E5F2F9;
+    border-bottom: 1px solid #C2E0F0;
+    border-top: 1px solid #FFFFFF;
+    height: 28px;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.EIM_groupTab li
+{
+    cursor: pointer;
+    float: left;
+    line-height: 25px;
+    list-style: none outside none;
+    text-align: center;
+    vertical-align: middle;
+    width: 55px;
+}
+.EIM_groupTab .seled
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -85px -211px transparent;
+    color: #FFFFFF;
+}
+.ie #EIM_groupTabDiscu
+{
+    line-height: 28px;
+}
+.EIM_groupBox
+{
+    overflow: hidden;
+    position: relative;
+    top: 30px;
+    width: 100%;
+}
+.EIM_groupListOuter
+{
+    background: none repeat scroll 0 0 #F5FAFD;
+    bottom: 25px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.EIM_groupListInner
+{
+    width: 100%;
+}
+.ie6_0 .EIM_groupListInner
+{
+    background: none repeat scroll 0 50% transparent;
+}
+.EIM_Container .EIM_GroupList_Group
+{
+    background: none repeat scroll 0 0 transparent;
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    overflow: hidden;
+    padding: 4px 0 4px 10px;
+    text-decoration: none;
+}
+.EIM_GroupList_Group
+{
+    background: none repeat scroll 0 0 transparent;
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    overflow: hidden;
+    padding: 4px 0 4px 10px;
+    text-decoration: none;
+}
+.EIM_GroupList_AvatarContainer
+{
+    float: left;
+    height: 22px;
+    overflow: hidden;
+    width: 22px;
+}
+.EIM_jumpUpInGroupList .EIM_GroupList_AvatarContainer
+{
+    margin: -2px 0 0;
+}
+.EIM_GroupList_RightContainer
+{
+    margin-right: 10px;
+    overflow: hidden;
+}
+.ie6_0 .EIM_GroupList_RightContainer
+{
+    margin-right: auto;
+    width: 170px;
+}
+.ie6_0 .EIM_recentListPanel .EIM_GroupList_RightContainer
+{
+    width: 130px;
+}
+.EIM_GroupList_Name
+{
+    height: 16px;
+    line-height: 16px;
+    margin: 0 0 0 5px;
+    overflow: hidden;
+    padding: 2px 0;
+    text-decoration: none;
+    width: 1000px;
+}
+.EIM_recentListPanel
+{
+    background: none repeat scroll 0 0 #F5FAFD;
+    display: none;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+}
+.EIM_recentList
+{
+    overflow: visible;
+}
+.EIM_recentList .EIM_GroupList_Group
+{
+    background: none repeat scroll 0 0 transparent;
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    overflow: hidden;
+    padding: 4px 0 4px 24px;
+    text-decoration: none;
+}
+.EIM_List_BigHead .EIM_BuddyList_ClientType, .EIM_List_BigHead .EIM_RecentList_ClientType
+{
+    margin: 10px 0 0;
+}
+.EIM_List_BigHead .EIM_BuddyList_Buddy, .EIM_List_BigHead .EIM_GroupList_Group
+{
+    height: 40px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+.EIM_List_BigHead .EIM_BuddyList_State, .EIM_List_BigHead .EIM_GroupList_State
+{
+    margin: 30px 0 0 -11px;
+}
+.EIM_List_BigHead .EIM_BuddyList_AvatarContainer, .EIM_List_BigHead .EIM_GroupList_AvatarContainer
+{
+    height: 42px;
+    width: 42px;
+}
+.EIM_List_BigHead img.EIM_BuddyList_Avatar, .EIM_List_BigHead img.EIM_GroupList_Avatar, .EIM_List_BigHead .EIM_discuList_Avatar
+{
+    height: 40px;
+    width: 40px;
+}
+.EIM_List_BigHead .EIM_discuList_Avatar
+{
+    background-position: 5px 5px;
+}
+.EIM_List_BigHead .EIM_BuddyList_Sign, .EIM_List_BigHead .EIM_GroupList_Bulletin
+{
+    display: block;
+}
+.EIM_taskBar
+{
+    float: left;
+    height: 29px;
+    margin: 1px 0 0;
+}
+.EIM_chatBuddyList
+{
+    float: left;
+    margin: 0;
+}
+.EIM_taskBar_buddy
+{
+    color: #333333;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 30px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 122px;
+}
+.EIM_taskBar_buddy_mask
+{
+    height: 100%;
+    margin: -8px 0 0;
+    padding: 8px 0 0;
+    width: 100%;
+}
+.EIM_TaskBar_FlashDiv
+{
+    border-left: 1px solid white;
+    float: left;
+    height: 30px;
+    overflow: hidden;
+    padding: 0;
+    width: 102px;
+}
+.EIM_taskBar_currentBuddy .EIM_TaskBar_FlashDiv, .EIM_taskBar_currentBuddy_arr .EIM_TaskBar_FlashDiv
+{
+    padding: 0;
+}
+.EIM_taskBar_avatar
+{
+    background: none repeat scroll 0 0 white;
+    display: inline;
+    float: left;
+    height: 20px;
+    margin: 4px;
+    overflow: hidden;
+    padding: 1px;
+    position: static;
+    width: 20px;
+}
+.EIM_taskBar_state
+{
+    display: inline;
+    float: left;
+    height: 10px;
+    margin: 15px 0 0 -15px;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 10px;
+}
+.EIM_taskBar_typing
+{
+    display: none;
+    float: left;
+    height: 16px;
+    margin: 9px 0 0 -21px;
+    overflow: hidden;
+    width: 16px;
+}
+.EIM_taskBar_callmeBuddy .EIM_taskBar_state
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -72px 0 yellow;
+}
+.EIM_taskBar_onlineBuddy .EIM_taskBar_state
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll 0 0 transparent;
+    height: 0;
+    width: 0;
+}
+.EIM_taskBar_awayBuddy .EIM_taskBar_state
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -18px 0 yellow;
+}
+.EIM_taskBar_busyBuddy .EIM_taskBar_state
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -36px 0 yellow;
+}
+.EIM_taskBar_silentBuddy .EIM_taskBar_state
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -108px 0 yellow;
+}
+.EIM_taskBar_offlineBuddy .EIM_taskBar_avatar
+{
+    opacity: 0.5;
+}
+.EIM_taskBar_offlineBuddy .EIM_taskBar_state
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -90px 0 transparent;
+    height: 0;
+    width: 0;
+}
+.EIM_taskBar_nick
+{
+    display: block;
+    height: 16px;
+    line-height: 18px;
+    margin: 4px 0 0;
+    overflow: hidden;
+    padding: 2px 0;
+    width: 70px;
+}
+.ie6_0 .EIM_taskBar_nick
+{
+    float: left;
+}
+.EIM_TaskBar_CloseChatboxButton
+{
+    display: block;
+    float: left;
+    height: 26px;
+    margin: 0;
+    overflow: hidden;
+    padding: 2px 0;
+    text-align: center;
+    text-indent: -999em;
+    width: 19px;
+}
+.EIM_taskBar_currentBuddy
+{
+    margin: -8px 0 0;
+    padding: 8px 0 0;
+}
+.EIM_taskBar_currentBuddy_arr
+{
+    margin: -8px 0 0;
+    padding: 8px 0 0;
+}
+.EIM_taskBar_currentBuddy .EIM_taskBar_avatar, .EIM_taskBar_currentBuddy_arr .EIM_taskBar_avatar
+{
+    border: 1px solid #40475A;
+    margin: 3px;
+}
+.EIM_taskBar_currentBuddy .EIM_taskBar_nick, .EIM_taskBar_currentBuddy_arr .EIM_taskBar_nick
+{
+    font-weight: bold;
+}
+.EIM_taskBar_buddyJumpUp
+{
+    background: none repeat scroll 0 0 #EEA426;
+}
+.EIM_line
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll 0 -239px transparent;
+    float: right;
+    height: 30px;
+    margin: 1px 0 0;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 1px;
+}
+.EIM_chatbox
+{
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px solid #666666;
+    bottom: 40px;
+    display: none;
+    height: 270px;
+    overflow: hidden;
+    position: absolute;
+    right: 220px;
+    width: 290px;
+}
+.EIM_chatboxTitle
+{
+    border-top: 1px solid white;
+    height: 35px;
+    overflow: hidden;
+    padding: 2px 3px;
+}
+.EIM_chatboxControler
+{
+    float: right;
+    height: 16px;
+    overflow: hidden;
+    width: 40px;
+}
+.EIM_chatboxCloseButton
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -18px -60px blue;
+    cursor: pointer;
+    float: right;
+    height: 15px;
+    width: 15px;
+}
+.EIM_chatboxMinButton
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll 0 -60px blue;
+    cursor: pointer;
+    float: right;
+    height: 15px;
+    margin: 0 3px 0 0;
+    width: 15px;
+}
+.avatarInChatbox
+{
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #CACACA;
+    display: block;
+    float: left;
+    height: 30px;
+    overflow: hidden;
+    padding: 1px;
+    position: static;
+    width: 30px;
+}
+.stateInChatbox
+{
+    display: block;
+    float: left;
+    height: 10px;
+    margin: 22px 0 0 -12px;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 10px;
+}
+.typingInChatbox
+{
+    display: none;
+    float: left;
+    height: 16px;
+    margin: 16px 0 0 -18px;
+    overflow: hidden;
+    width: 16px;
+}
+.callmeBuddyInChatbox .stateInChatbox
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -72px 0 yellow;
+}
+.onlineBuddyInChatbox .stateInChatbox
+{
+    display: none;
+}
+.awayBuddyInChatbox .stateInChatbox
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -18px 0 yellow;
+}
+.busyBuddyInChatbox .stateInChatbox
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -36px 0 yellow;
+}
+.silentBuddyInChatbox .stateInChatbox
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -108px 0 yellow;
+}
+.offlineBuddyInChatbox .avatarInChatbox
+{
+    opacity: 0.5;
+}
+.offlineBuddyInChatbox .stateInChatbox
+{
+    display: none;
+}
+.chatBox_buddyAvatarArea
+{
+    float: left;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+.chatBox_buddyAvatarArea img
+{
+    float: left;
+    height: 40px;
+    width: 40px;
+}
+.chatBox_groupAvatarArea
+{
+    float: left;
+    height: 34px;
+    width: 34px;
+}
+.window_current .chatBox_groupAvatarArea
+{
+    box-shadow: 0 0 3px white;
+}
+.EIM_chatboxNameLine
+{
+    height: 16px;
+    line-height: 16px;
+    margin: 0 0 0 38px;
+    overflow: hidden;
+}
+.EIM_chatboxName
+{
+    color: #333333;
+    cursor: default;
+    display: block;
+    float: left;
+    height: 16px;
+    line-height: 16px;
+}
+.EIM_chatboxName .mainName
+{
+    color: #222222;
+    font-weight: bold;
+}
+.EIM_chatOutline
+{
+    height: 138px;
+    overflow: hidden;
+}
+.chatContentInChatbox
+{
+    background: none repeat scroll 0 0 white;
+    border-bottom: 1px solid #CACACA;
+    border-top: 1px solid #A3A3A3;
+    display: block;
+    height: 138px;
+    margin: 0 auto;
+    overflow: auto;
+    width: 100%;
+}
+.EIM_yellowTips
+{
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #FFFFCC;
+    border-color: -moz-use-text-color #CCCCCC #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+    color: #000000;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 6px;
+}
+
+.chatBox_myMsg
+{
+    display: block;
+    margin: 0;
+    padding: 5px;
+}
+.chatBox_myMsg .msgHead
+{
+    color: #008000;
+    overflow: hidden;
+}
+.chatBox_myMsg .msgBody
+{
+    color: #000000;
+    margin: 0 0 0 13px;
+    word-wrap: break-word;
+}
+.chatBox_buddyMsg
+{
+    display: block;
+    margin: 0;
+    padding: 5px;
+}
+.chatBox_buddyMsg .msgHead
+{
+    color: #0000FF;
+}
+.chatBox_buddyMsg .msgBody
+{
+    color: #000000;
+    margin: 0 0 0 13px;
+    word-wrap: break-word;
+}
+.chatBox_buddyMsg .msgBody .chatLink, .chatBox_myMsg .msgBody .chatLink
+{
+    font: inherit;
+}
+.chatLogBox
+{
+    margin-left: 1px;
+}
+.optionInChatbox
+{
+    height: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 1px 0;
+    width: 282px;
+}
+.chatLogTips
+{
+    background: none repeat scroll 0 0 #FFF0BD;
+    border-bottom: 1px solid #DDDDDD;
+    border-top: 1px solid #DDDDDD;
+    box-shadow: 0 0 5px #AAAAAA;
+    height: 30px;
+    line-height: 30px;
+    width: 565px;
+    z-index: 2;
+}
+.chatLogTips_icon
+{
+    background: url("../images/history_info.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 20px;
+    margin: 5px;
+    width: 20px;
+}
+.chatLogMain
+{
+    background: none repeat scroll 0 0 white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 565px;
+    height: 354px;
+    z-index: 1;
+}
+.chatLogMain .dateLine
+{
+    border-bottom: 1px dashed #CCCCCC;
+    clear: both;
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+    margin: 10px 2px 2px;
+    padding: 0 10px;
+}
+.chatLogMain .me
+{
+    background: none repeat scroll 0 0 white;
+}
+.chatLogMain .me dt
+{
+    color: #014769;
+    line-height: 25px;
+}
+.chatLogMain dd
+{
+    line-height: 20px;
+    margin: 0 0 0 13px;
+}
+.chatLogMain dl
+{
+    padding-left: 10px;
+}
+.chatLog_PageControlBar
+{
+    background: none repeat scroll 0 0 #F0F0EF;
+    bottom: 0;
+    height: 28px;
+    position: absolute;
+    width: 565px;
+    z-index: 1;
+}
+.chatLog_PageControlArea
+{
+    float: right;
+    height: 20px;
+    line-height: 18px;
+    margin: 5px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    width: 280px;
+}
+.chatLog_PageControlArea div
+{
+    float: left;
+    height: 20px;
+}
+.chatLog_firstPage
+{
+    background: url("../images/history_button.gif") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    margin: 0 0 0 5px;
+    text-indent: -999em;
+    width: 22px;
+}
+.chatLog_firstPage_disable
+{
+    background: url("../images/history_button.gif") no-repeat scroll 0 -23px transparent;
+    cursor: default;
+}
+.chatLog_pageUp
+{
+    background: url("../images/history_button.gif") no-repeat scroll -26px 0 transparent;
+    cursor: pointer;
+    margin: 0 0 0 5px;
+    text-indent: -999em;
+    width: 56px;
+}
+.chatLog_pageUp_disable
+{
+    background: url("../images/history_button.gif") no-repeat scroll -26px -23px transparent;
+    cursor: default;
+}
+div.chatLog_currentPage
+{
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #CCCCCC;
+    height: 16px;
+    overflow: hidden;
+    padding: 1px;
+}
+input.chatLog_pageInput
+{
+    border: 0 none;
+    display: block;
+    float: left;
+    height: 12px;
+    line-height: 12px;
+    overflow: hidden;
+    padding: 1px 0 0 1px;
+    vertical-align: middle;
+    width: 30px;
+}
+
+div.chatLog_pageGo
+{
+    background: url("../images/history_button.gif") no-repeat scroll -135px -1px transparent;
+    cursor: pointer;
+    height: 16px;
+    margin: 0 0 0 2px;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 17px;
+}
+.chatLog_pageDown
+{
+    background: url("../images/history_button.gif") no-repeat scroll -86px 0 transparent;
+    cursor: pointer;
+    text-indent: -999em;
+    width: 20px;
+}
+.chatLog_pageDown_disable
+{
+    background: url("../images/history_button.gif") no-repeat scroll -86px -23px transparent;
+    cursor: default;
+}
+.chatLog_lastPage
+{
+    background: url("../images/history_button.gif") no-repeat scroll -110px 0 transparent;
+    cursor: pointer;
+    margin: 0 0 0 5px;
+    text-indent: -999em;
+    width: 22px;
+}
+.chatLog_lastPage_disable
+{
+    background: url("../images/history_button.gif") no-repeat scroll -110px -23px transparent;
+    cursor: default;
+}
+.chatLogOptionPanel
+{
+    background: none repeat scroll 0 0 white;
+    border-color: #CCCCCC #6A6A6A #666666 #CDCDCD;
+    border-style: solid;
+    border-width: 1px;
+    display: none;
+    height: 48px;
+    overflow: hidden;
+    position: absolute;
+    width: 100px;
+}
+.chatLogOptionPanelEx
+{
+    height: 72px;
+}
+.exportCurrentChatLogIframe
+{
+    display: none;
+}
+.sendOptionPanel
+{
+    background: none repeat scroll 0 0 white;
+    border-color: #CCCCCC #6A6A6A #666666 #CDCDCD;
+    border-style: solid;
+    border-width: 1px;
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    width: 150px;
+}
+.sendOptionPanel
+{
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #666666;
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    width: 150px;
+}
+.groupMaskPanel
+{
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #666666;
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    width: 160px;
+}
+.settingPanel
+{
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #666666;
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    width: 120px;
+}
+.settingPanel a
+{
+    color: black;
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    padding: 0 10px 0 5px;
+}
+.settingPanel a:hover
+{
+    background: none repeat scroll 0 0 #D6E9F8;
+    color: black;
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    padding: 0 10px 0 5px;
+}
+a.simpleMenuItem
+{
+    color: black;
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    padding: 0 10px 0 5px;
+}
+a.simpleMenuItem:hover
+{
+    background: none repeat scroll 0 0 #D6E9F8;
+    cursor: default;
+}
+.selectedIcon
+{
+    float: left;
+    height: 16px;
+    margin: 4px 4px 4px 0;
+    overflow: hidden;
+    width: 16px;
+}
+.simpleMenuItemSelected .selectedIcon
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll 5px -33px transparent;
+}
+.sendFilePanel
+{
+    background: url("../images/bg_sendfile.gif?t=20111011001") no-repeat scroll 0 0 transparent;
+    border: 1px solid #666666;
+    display: none;
+    height: 49px;
+    overflow: hidden;
+    position: absolute;
+    width: 100px;
+}
+.sendFilePanelEx
+{
+    border: 0 none;
+    height: 1px;
+    width: 1px;
+}
+.panel_sendOffFileButton, .panel_sendFileButton
+{
+    cursor: pointer;
+    float: left;
+    height: 25px;
+    outline: 0 none;
+    overflow: hidden;
+    width: 100%;
+}
+.sendFilePanel a.panel_sendOffFileButton:hover
+{
+    background: url("../images/bg_sendfile.gif?t=20111011001") no-repeat scroll 0 -60px transparent;
+}
+.sendFilePanel a.panel_sendFileButton:hover
+{
+    background: url("../images/bg_sendfile.gif?t=20111011001") no-repeat scroll 0 -144px transparent;
+}
+.panelSendForm
+{
+    height: 25px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100px;
+}
+.panelSendForm .f
+{
+    cursor: pointer;
+    font-size: 30px;
+    height: 25px;
+    margin-left: -340px;
+    opacity: 0;
+    overflow: hidden;
+    width: 440px;
+}
+.chatBox_titleBar
+{
+    cursor: default;
+    height: 37px;
+    overflow: hidden;
+}
+.chatBox_groupAvatar
+{
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #999999;
+    display: block;
+    float: left;
+    height: 30px;
+    overflow: hidden;
+    padding: 1px;
+    position: static;
+    width: 30px;
+}
+.chatBox_groupType
+{
+    display: block;
+    float: left;
+    height: 10px;
+    margin: 22px 0 0 -12px;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 10px;
+}
+.chatBox_nameArea
+{
+    height: 16px;
+    line-height: 16px;
+    margin-left: 60px;
+    overflow: hidden;
+}
+.chatBox_allName
+{
+    display: block;
+    float: left;
+    height: 16px;
+    line-height: 16px;
+}
+.ie6_0 .chatBox_allName .chatBox_mainName
+{
+}
+.chatBox_moreInfoArea
+{
+    height: 18px;
+    line-height: 18px;
+    margin: 0 0 0 38px;
+    overflow: hidden;
+}
+a.EIM_chatboxQzoneIcon
+{
+    background: url("../../../style/images/portal_all_png.png?t=20111011001") no-repeat scroll -62px -62px transparent;
+    display: block;
+    float: left;
+    height: 16px;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 16px;
+}
+.ie6_0 a.EIM_chatboxQzoneIcon, .ie7_0 a.EIM_chatboxQzoneIcon
+{
+    background: url("../../../style/images/portal_all_gif.gif?t=20111011001") no-repeat scroll -62px -62px transparent;
+}
+a.EIM_chatboxGspaceIcon
+{
+    display: inline;
+    float: left;
+    height: 20px;
+    margin: -2px 0 0 -2px;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 20px;
+}
+.EIM_gspaceLevel_0
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll 0 -100px transparent;
+}
+.ie6_0 a.EIM_gspaceLevel_0, .ie7_0 a.EIM_gspaceLevel_0
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll 0 -100px transparent;
+}
+.EIM_gspaceLevel_1
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -20px -100px transparent;
+}
+.ie6_0 a.EIM_gspaceLevel_1, .ie7_0 a.EIM_gspaceLevel_1
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -20px -100px transparent;
+}
+.EIM_gspaceLevel_2
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -40px -100px transparent;
+}
+.ie6_0 a.EIM_gspaceLevel_2, .ie7_0 a.EIM_gspaceLevel_2
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -40px -100px transparent;
+}
+.EIM_gspaceLevel_3
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -60px -100px transparent;
+}
+.ie6_0 a.EIM_gspaceLevel_3, .ie7_0 a.EIM_gspaceLevel_3
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -60px -100px transparent;
+}
+.EIM_gspaceLevel_4
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -80px -100px transparent;
+}
+.ie6_0 a.EIM_gspaceLevel_4, .ie7_0 a.EIM_gspaceLevel_4
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -80px -100px transparent;
+}
+.EIM_gspaceLevel_5
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -100px -100px transparent;
+}
+.ie6_0 a.EIM_gspaceLevel_5, .ie7_0 a.EIM_gspaceLevel_5
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -100px -100px transparent;
+}
+.EIM_gspaceLevel_6
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -120px -100px transparent;
+}
+.ie6_0 a.EIM_gspaceLevel_6, .ie7_0 a.EIM_gspaceLevel_6
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -120px -100px transparent;
+}
+.EIM_gspaceLevel_7
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -140px -100px transparent;
+}
+.ie6_0 a.EIM_gspaceLevel_7, .ie7_0 a.EIM_gspaceLevel_7
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -140px -100px transparent;
+}
+.EIM_gspaceLevel_8
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -160px -100px transparent;
+}
+.ie6_0 a.EIM_gspaceLevel_8, .ie7_0 a.EIM_gspaceLevel_8
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -160px -100px transparent;
+}
+.EIM_gspaceLevel_9
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -180px -100px transparent;
+}
+.ie6_0 a.EIM_gspaceLevel_9, .ie7_0 a.EIM_gspaceLevel_9
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -180px -100px transparent;
+}
+.chatBox_announcementArea
+{
+    display: block;
+    font-weight: normal;
+    height: 16px;
+    line-height: 16px;
+    margin: 0 0 0 18px;
+    overflow: hidden;
+}
+.chatBox_announcementArea span
+{
+    cursor: text;
+}
+.ie6_0 .chatBox_announcementArea span
+{
+}
+.chatBox_announcementArea a
+{
+    color: #000000;
+}
+.chatBox_sideBar
+{
+    bottom: 0;
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 190px;
+}
+.chatBox_sideBar2
+{
+    background: none repeat scroll 0 0 #E3F1F7;
+    border-bottom-right-radius: 5px;
+    bottom: 0;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+}
+.chatBox_sideBar_trigger
+{
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 90px;
+    line-height: 1;
+    margin-top: -60px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 22px;
+}
+.chatBox_sideBar_trigger .online_member_count
+{
+    color: #FF6C00;
+    display: block;
+    font-family: Helvetica;
+    padding-top: 3px;
+}
+.chatBox_sideBar2_expand .chatBox_groupSpace2
+{
+    display: none;
+}
+.chatBox_sideBar_trigger .unexpand
+{
+    background: url("../images/sprite.png") no-repeat scroll 0 0 transparent;
+    display: none;
+    height: 50px;
+    width: 9px;
+}
+.ie6_0 .chatBox_sideBar_trigger .unexpand
+{
+    background: url("../images/sprite.gif") no-repeat scroll 0 0 transparent;
+}
+.chatBox_sideBar_trigger .expand
+{
+    background: url("../images/sprite.png") no-repeat scroll 0 -260px transparent;
+    color: #1C4B64;
+    display: block;
+    height: 68px;
+    padding-top: 22px;
+    width: 22px;
+}
+.ie6_0 .chatBox_sideBar_trigger .expand
+{
+    background-image: url("../images/sprite.gif");
+}
+.chatBox_sideBar2_expand .chatBox_sideBar_trigger
+{
+    height: 50px;
+    margin-top: -25px;
+    width: 9px;
+}
+.chatBox_sideBar2_expand .chatBox_sideBar_trigger .unexpand
+{
+    display: block;
+}
+.chatBox_sideBar2_expand .chatBox_sideBar_trigger .expand
+{
+    display: none;
+}
+.chatBox_groupSpace2
+{
+    padding-left: 3px;
+}
+.chatBox_groupSpace2 a
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 16px;
+    margin-bottom: 6px;
+    width: 16px;
+}
+.ie6_0 .chatBox_groupSpace2 a, .ie7_0 .chatBox_groupSpace2 a
+{
+    background-image: url("../images/eIM_sprite_gif.gif?t=20111011001");
+}
+.chatBox_groupSpace_titleBar
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll 0 -527px transparent;
+    color: #666666;
+    height: 20px;
+    padding: 0 0 0 5px;
+}
+.chatBox_settingButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -2px -122px transparent;
+    cursor: pointer;
+    float: left;
+    height: 16px;
+    margin: 2px;
+    width: 16px;
+}
+.ie6_0 .chatBox_settingButton, .ie7_0 .chatBox_settingButton
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -2px -122px transparent;
+}
+.chatBox_groupSpace_mainArea
+{
+    background: none repeat scroll 0 0 #E9F6FC;
+    height: 70px;
+}
+.chatBox_groupSpace_mainArea .chatBox_groupSpace_mainArea_a
+{
+    display: block;
+    height: 17px;
+    overflow: hidden;
+    padding: 3px 0 3px 5px;
+    width: 100%;
+}
+.chatBox_groupDetail, .chatBox_groupCard
+{
+    float: left;
+    height: 16px;
+    margin: 1px 2px 0;
+    overflow: hidden;
+    width: 16px;
+}
+.chatBox_groupSpace_groupShare_div
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -42px -122px transparent;
+}
+.ie6_0 .chatBox_groupSpace_groupShare_div, .ie7_0 .chatBox_groupSpace_groupShare_div
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -42px -123px transparent;
+}
+.chatBox_groupSpace_groupForum_div
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -22px -122px transparent;
+}
+.ie6_0 .chatBox_groupSpace_groupForum_div, .ie7_0 .chatBox_groupSpace_groupForum_div
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -22px -122px transparent;
+}
+.chatBox_groupSpace_groupAlbum_div
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -62px -122px transparent;
+}
+.ie6_0 .chatBox_groupSpace_groupAlbum_div, .ie6_0 .chatBox_groupSpace_groupAlbum_div
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -62px -122px transparent;
+}
+.chatBox_groupDetail
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -25px -214px transparent;
+}
+.ie6_0 .chatBox_groupDetail
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -25px -214px transparent;
+}
+.ie7_0 .chatBox_groupDetail
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -25px -215px transparent;
+}
+.chatBox_groupCard
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -54px -214px transparent;
+}
+.ie6_0 .chatBox_groupCard
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -54px -214px transparent;
+}
+.ie7_0 .chatBox_groupCard
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -54px -215px transparent;
+}
+.chatBox_groupMember_titleBar
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll 0 -527px transparent;
+    color: #666666;
+    height: 20px;
+    padding: 0 0 0 5px;
+}
+.chatBox_groupMember_mainArea
+{
+    background: none repeat scroll 0 0 #E8F6FB;
+    border-bottom-right-radius: 5px;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+}
+.chatBox_groupMember_buddy
+{
+    background: none repeat scroll 0 0 transparent;
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    overflow: hidden;
+    padding: 2px 0;
+    position: relative;
+    text-decoration: none;
+}
+.chatBox_groupMember_avatarArea
+{
+    float: left;
+    height: 20px;
+    margin-left: 18px;
+    overflow: hidden;
+    width: 22px;
+}
+img.chatBox_groupMember_avatar
+{
+    display: block;
+    float: left;
+    height: 20px;
+    overflow: hidden;
+    position: static;
+    width: 20px;
+}
+.chatBox_groupMember_state
+{
+    display: inline;
+    float: left;
+    height: 10px;
+    margin: 10px 0 0 -10px;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 10px;
+}
+.chatBox_groupMember_callmeArea, .chatBox_groupMember_onlineArea, .chatBox_groupMember_awayArea, .chatBox_groupMember_busyArea, .chatBox_groupMember_silentArea, .chatBox_groupMember_hiddenArea, .chatBox_groupMember_offlineArea
+{
+    display: block;
+    padding: 0;
+}
+.chatBox_groupMember_callmeArea .chatBox_groupMember_state
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -72px 0 yellow;
+}
+.chatBox_groupMember_awayArea .chatBox_groupMember_state
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -18px 0 yellow;
+}
+.chatBox_groupMember_busyArea .chatBox_groupMember_state
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -36px 0 yellow;
+}
+.chatBox_groupMember_silentArea .chatBox_groupMember_state
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -108px 0 yellow;
+}
+.chatBox_groupMember_hiddenArea .chatBox_groupMember_state
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -54px 0 yellow;
+}
+.chatBox_groupMember_offlineArea .chatBox_groupMember_avatar
+{
+    opacity: 0.5;
+}
+.chatBox_groupMember_offlineArea .chatBox_groupMember_state
+{
+    display: none;
+}
+.chatBox_groupMember_nameArea
+{
+    float: left;
+    overflow: hidden;
+    width: 130px;
+}
+.chatBox_groupMember_nick
+{
+    height: 16px;
+    line-height: 16px;
+    padding: 0;
+    text-decoration: none;
+    width: 2000px;
+}
+.chatBox_discuMember_mainArea .chatBox_groupMember_nameArea
+{
+    width: 70px;
+}
+.chatBox_discuMember_mainArea .chatBox_groupMember_avatarArea
+{
+    margin-left: 5px;
+}
+.groupMember_icon
+{
+    height: 18px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 2px;
+    width: 18px;
+}
+.groupMaster .groupMember_icon
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -62px -141px transparent;
+}
+.groupManager .groupMember_icon
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -42px -141px transparent;
+}
+.chatBox_adsorbSize
+{
+    height: 350px;
+    width: 350px;
+}
+.group_chatBox_adsorbSize
+{
+    height: 350px;
+    width: 430px;
+}
+.chatBox_mainArea
+{
+    background: none repeat scroll 0 0 transparent;
+    height: 300px;
+    margin: 0;
+    position: relative;
+}
+.group_chatBox_mainArea
+{
+    height: 100%;
+    margin: 0 22px 0 0;
+    position: relative;
+}
+.chatBox_chatBoard
+{
+    bottom: 143px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.chatBox_moreMsgTip
+{
+    background: none repeat scroll 0 0 #E0F1FE;
+    color: #000000;
+    display: none;
+    height: 22px;
+    left: 0;
+    padding-top: 3px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.chatBox_moreMsgTip .linkBtn:hover
+{
+    text-decoration: underline;
+}
+.chatBox_moreMsgTip .tipIcon
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -82px -2px transparent;
+    display: inline-block;
+    height: 16px;
+    margin: 0 3px 0 5px;
+    vertical-align: middle;
+    width: 16px;
+}
+.ie6_0 .chatBox_moreMsgTip .tipIcon
+{
+    background-image: url("../images/eIM_sprite_gif.gif?t=20111011001");
+}
+.chatBox_msgList
+{
+    bottom: 0;
+    display: block;
+    margin: 0 auto;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    vertical-align: top;
+}
+.chatBox_msgList_backToBottom
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -142px -215px transparent;
+    bottom: 2px;
+    cursor: pointer;
+    display: none;
+    height: 16px;
+    position: absolute;
+    right: 20px;
+    width: 16px;
+}
+a:hover .chatBox_msgList_backToBottom
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -160px -215px transparent;
+}
+.ie6_0 .chatBox_msgList_backToBottom
+{
+    background-image: url("../images/eIM_sprite_gif.gif?t=20111011001");
+}
+.ie6_0 a:hover .chatBox_msgList_backToBottom
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -160px -215px transparent;
+}
+.chatBox_yellowTipsBar
+{
+    background: none repeat scroll 0 0 #FFFFCC;
+    border-top: 1px solid #CCCCCC;
+    bottom: 0;
+    color: #000000;
+    display: none;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    padding-left: 6px;
+    position: absolute;
+    width: 100%;
+}
+.chatBox_myMsg
+{
+    display: block;
+    margin: 0;
+    padding: 5px;
+}
+.chatBox_myMsg .msgBody
+{
+    color: #000000;
+    margin: 0 0 0 13px;
+    word-wrap: break-word;
+}
+.chatBox_buddyMsg
+{
+    display: block;
+    margin: 0;
+    padding: 5px;
+}
+.chatBox_buddyMsg .msgBody
+{
+    color: #000000;
+    margin: 0 0 0 13px;
+    word-wrap: break-word;
+}
+.chatBox_buddyMsg .defaultFontStyle, .chatBox_myMsg .defaultFontStyle
+{
+    color: #000000;
+    font-family: 宋体;
+    font-size: 10pt;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+}
+.msgLink
+{
+    text-decoration: none;
+}
+.chatBox_buddyMsg .msgBody .msgLink
+{
+    text-decoration: underline;
+}
+.chatBox_speechButton
+{
+    background: none repeat scroll 0 0 transparent;
+    border: 0 solid;
+    color: transparent;
+    cursor: pointer;
+    display: none;
+    float: left;
+    font-size: 16px;
+    height: 30px;
+    outline: 0 none;
+    width: 22px;
+}
+.chatBox_toolBar_top
+{
+    background: none repeat scroll 0 0 #c8b8e9;
+    bottom: 138px;
+    cursor: n-resize;
+    font-size: 0;
+    height: 5px;
+    left: 0;
+    line-height: 5px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    width: 100%;
+}
+.chatBox_toolBar
+{
+    background: none repeat scroll 0 0 #c8b8e9;
+    bottom: 115px;
+    height: 25px;
+    left: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+.chatBox_toolBar a
+{
+    border: 1px solid #c8b8e9;
+    display: block;
+    float: left;
+    height: 20px;
+    margin: 0 2px;
+    width: 20px;
+}
+.chatBox_toolBar a:hover
+{
+    background: url("images/hover.png") repeat scroll 0 0 transparent;
+    border: 1px solid #848F97;
+    border-radius: 1px 1px 1px 1px;
+    display: block;
+}
+.chatBox_fontButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll 0 -60px transparent;
+    height: 100%;
+    width: 100%;
+}
+.ie6_0 .chatBox_fontButton, .ie7_0 .chatBox_fontButton
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll 0 -60px transparent;
+}
+.chatBox_faceButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -20px -60px transparent;
+    height: 100%;
+    width: 100%;
+}
+.ie6_0 .chatBox_faceButton, .ie7_0 .chatBox_faceButton
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -20px -60px transparent;
+}
+.chatBox_handwriteButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -160px -60px transparent;
+    height: 100%;
+    width: 100%;
+}
+.ie6_0 .chatBox_handwriteButton, .ie7_0 .chatBox_handwriteButton
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -160px -60px transparent;
+}
+.chatBox_sendPicButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -60px -60px transparent;
+    height: 100%;
+    width: 100%;
+}
+.ie6_0 .chatBox_sendPicButton, .ie7_0 .chatBox_sendPicButton
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -60px -60px transparent;
+}
+.chatBox_shakeButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -140px -60px transparent;
+    cursor: pointer;
+    float: left;
+    height: 20px;
+    width: 20px;
+}
+.chatBox_snapButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -120px -60px transparent;
+    height: 100%;
+    width: 100%;
+}
+.ie6_0 .chatBox_snapButton, .ie7_0 .chatBox_snapButton
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -120px -60px transparent;
+}
+.chatBox_sendFileButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -70px -380px transparent;
+    cursor: pointer;
+    float: left;
+    height: 28px;
+    margin-left: 2px;
+    margin-top: 5px;
+    width: 28px;
+}
+.ie6_0 .chatBox_sendFileButton, .ie7_0 .chatBox_sendFileButton
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -70px -380px transparent;
+}
+.sendPicForm
+{
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+.sendFileForm
+{
+    float: left;
+    height: 28px;
+    margin: 0;
+    overflow: hidden;
+    padding: 5px 4px 3px 3px;
+    width: 28px;
+}
+.sendPicForm .f
+{
+    cursor: pointer;
+    height: 25px;
+    margin: -2px 0 0 0;
+    opacity: 0;
+    overflow: hidden;
+    width: 22px;
+}
+.sendFileForm .f
+{
+    cursor: pointer;
+    height: 30px;
+    margin: -2px 0 0 0;
+    opacity: 0;
+    overflow: hidden;
+    width: 28px;
+}
+.chatBox_maskButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll 0 -20px transparent;
+    height: 100%;
+    width: 100%;
+}
+.ie6_0 .chatBox_maskButton, .ie7_0 .chatBox_maskButton
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll 0 -20px transparent;
+}
+.chatBox_acceptButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -20px -20px transparent;
+    height: 100%;
+    width: 100%;
+}
+.ie6_0 .chatBox_acceptButton, .ie7_0 .chatBox_acceptButton
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -20px -20px transparent;
+}
+.facePanel
+{
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #666666;
+    display: none;
+    height: 214px;
+    overflow: hidden;
+    position: absolute;
+    width: 446px;
+    z-index: 30001;
+}
+.defaultFacePanel
+{
+    background: url("../images/face.gif") no-repeat scroll 0 0 transparent;
+    display: none;
+    height: 215px;
+    margin: 5px;
+    overflow: hidden;
+    width: 436px;
+}
+.defaultFacePanel a
+{
+    cursor: default;
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 1px 0 0 1px;
+    overflow: hidden;
+    width: 28px;
+}
+.defaultFacePanel a:hover
+{
+    border: 1px solid blue;
+    cursor: default;
+    display: block;
+    float: left;
+    height: 27px;
+    margin: 1px 0 0 1px;
+    overflow: hidden;
+    width: 27px;
+}
+.customFacePanel
+{
+    display: none;
+    height: 210px;
+    margin: 2px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    width: 442px;
+}
+.customFacePanel a
+{
+    border: 1px solid #CCCCCC;
+    cursor: default;
+    display: block;
+    float: left;
+    height: 60px;
+    margin: 5px 0 0 6px;
+    overflow: hidden;
+    padding: 1px;
+    position: relative;
+    width: 60px;
+}
+.customFacePanel a img
+{
+    display: none;
+    position: absolute;
+}
+.customFacePanel a.loading
+{
+    background: url("../images/loading.gif") no-repeat scroll center center transparent;
+}
+.customFacePanel a.loaded
+{
+    background: none repeat scroll 0 50% transparent;
+}
+.customFacePanel a.loaded img
+{
+    display: block;
+}
+.customFacePanel_delImgBtn
+{
+    background: url("../images/del_face.gif") no-repeat scroll 0 0 transparent;
+    display: none;
+    height: 15px;
+    left: 45px;
+    margin: 0;
+    position: absolute;
+    top: 2px;
+    width: 15px;
+    z-index: 2;
+}
+.customFacePanel a:hover
+{
+    border: 1px solid blue;
+    cursor: default;
+    display: block;
+    float: left;
+}
+.noCustomFaceText
+{
+    margin: 90px auto 0;
+    width: 90px;
+}
+.customFacePanel a.noCustomFaceAddButton
+{
+    background: none repeat scroll 0 50% transparent;
+    color: #45649E;
+    cursor: pointer;
+    display: none;
+    float: none;
+    height: 16px;
+    line-height: 14px;
+    margin: 3px auto 0;
+    width: 80px;
+}
+.tabArea
+{
+    background: none repeat scroll 0 0 #D6E9F8;
+    height: 30px;
+    overflow: hidden;
+    padding: 0 0 0 5px;
+}
+.tabArea a
+{
+    cursor: default;
+    display: block;
+    float: left;
+    height: 14px;
+    line-height: 16px;
+    margin: 0 1px;
+    overflow: hidden;
+    padding: 5px 10px;
+}
+.tabArea a:hover
+{
+    background: none repeat scroll 0 0 white;
+}
+.tabArea a.current
+{
+    background: none repeat scroll 0 0 white;
+}
+.tabArea a.addCustomFaceButton
+{
+    display: block;
+    float: right;
+    height: 16px;
+    margin: 3px;
+    overflow: hidden;
+    padding: 4px 5px;
+}
+.addCustomFaceIcon
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll 2px -285px transparent;
+    display: block;
+    float: left;
+    height: 16px;
+    margin: 0 2px 0 0;
+    width: 16px;
+}
+#uploadCustomFaceIframe
+{
+    height: 1px;
+    left: -999px;
+    overflow: hidden;
+    position: absolute;
+    top: -999px;
+    width: 1px;
+}
+form#uploadCustomFaceForm
+{
+    background: none repeat scroll 0 0 blue;
+    cursor: pointer;
+    display: block;
+    float: right;
+    height: 20px;
+    opacity: 0;
+    overflow: hidden;
+    position: relative;
+    right: -76px;
+    top: 5px;
+    width: 76px;
+    z-index: 1;
+}
+.uploadCustomFaceButton
+{
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    overflow: hidden;
+    width: 65px;
+}
+#facePanelNotice
+{
+    background: none repeat scroll 0 0 #D2F6FF;
+    display: none;
+    height: 20px;
+    left: 0;
+    padding: 2px 10px 0;
+    position: absolute;
+    text-align: center;
+    top: 90px;
+    width: 100%;
+}
+.chatBox_clearButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -80px -60px transparent;
+    height: 100%;
+    width: 100%;
+}
+.ie6_0 .chatBox_clearButton, .ie7_0 .chatBox_clearButton
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -80px -60px transparent;
+}
+.chatBox_buttonBar
+{
+    margin: 6px 0 0;
+}
+.chatBox_buttonBar a
+{
+    display: block;
+    float: left;
+    height: 36px;
+    list-style: none outside none;
+    margin: 0 2px 0 0;
+    width: 36px;
+}
+.chatBox_buttonBar span
+{
+    display: block;
+    height: 28px;
+    margin: 5px 4px 3px;
+    width: 28px;
+}
+.chatBox_buttonBar a:hover
+{
+    background: url("../images/sprite.png") repeat scroll 0 -436px transparent;
+}
+.ie6_0 .chatBox_buttonBar a:hover
+{
+    background-image: url("../images/sprite.gif");
+}
+.chatBox_videoButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll 3px -380px transparent;
+}
+.ie6_0 .chatBox_videoButton, .ie7_0 .chatBox_videoButton
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll 3px -380px transparent;
+}
+.chatBox_historyButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -100px -60px transparent;
+    cursor: pointer;
+    float: left;
+    height: 20px;
+    width: 20px;
+}
+.chatBox_historyButtonCon
+{
+    float: right !important;
+    margin: 0 5px !important;
+    width: 90px !important;
+}
+.chatBox_historyButtontxt
+{
+    color: #000000;
+    float: left;
+    margin: 0 5px;
+}
+.ie .chatBox_historyButtontxt
+{
+    margin-top: 2px;
+}
+.ie6_0 .chatBox_historyButtontxt
+{
+    margin-top: 0;
+}
+.chatBox_Down
+{
+    background: url("http://0.web.qstatic.com/webIMpic/pubapps/0/50/images/eIM_sprite.gif?t=20111011001") no-repeat scroll 0 -22px transparent;
+    display: inline;
+    float: left;
+    height: 6px;
+    margin: 7px 0 0;
+    width: 7px;
+}
+.ie6_0 .chatBox_historyButton, .ie7_0 .chatBox_historyButton
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -100px -60px transparent;
+}
+.chatBox_quitButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -218px -380px transparent;
+    cursor: pointer;
+    display: inline;
+    float: right;
+    height: 20px;
+    margin: 0 4px;
+    width: 20px;
+}
+.ie6_0 .chatBox_quitButton, .ie7_0 .chatBox_quitButton
+{
+    background-image: url("../images/eIM_sprite_gif.gif?t=20111011001");
+}
+.chatBox_inputBox
+{
+    bottom: 28px;
+    display: block;
+    font-size: 12px;
+    height: 85px;
+    left: 0;
+    margin: 0 auto;
+    overflow: inherit;
+    padding: 1px 0;
+    position: absolute;
+    width: 100%;
+}
+.chatBox_controlPanel
+{
+    background: none repeat scroll 0 0 #cab8e8;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 35px;
+}
+.chatBox_sendOptionButton
+{
+    background: url("../images/sprite.png?t=20111011001") no-repeat scroll 0 -618px transparent;
+    display: inline;
+    float: right;
+    height: 22px;
+    line-height: 20px;
+    margin: 5px 8px 4px 0;
+    overflow: hidden;
+    text-align: center;
+    width: 19px;
+}
+.chatBox_sendOptionButton:hover
+{
+    background: url("../images/sprite.png?t=20111011001") no-repeat scroll 0 -576px transparent;
+}
+.ie6_0 .chatBox_sendOptionButton
+{
+    background-image: url("../images/sprite.gif?t=20111011001");
+}
+.ie6_0 .chatBox_sendOptionButton:hover
+{
+    background-image: url("../images/sprite.gif?t=20111011001");
+}
+.chatBox_sendMsgButton
+{
+    background: url("../images/sprite.png?t=20111011001") no-repeat scroll 0 -534px transparent;
+    display: block;
+    float: right;
+    height: 22px;
+    line-height: 20px;
+    margin: 5px 0 4px;
+    overflow: hidden;
+    text-align: center;
+    width: 64px;
+}
+.chatBox_sendMsgButton:hover
+{
+    background: url("../images/sprite.png") no-repeat scroll 0 -492px transparent;
+}
+.ie7_0 .chatBox_sendMsgButton, .ie8_0 .chatBox_sendMsgButton
+{
+    line-height: 24px;
+}
+.ie6_0 .chatBox_sendMsgButton
+{
+    background-image: url("../images/sprite.gif?t=20111011001");
+}
+.chatBox_closeButton
+{
+    background: url("../images/sprite.png?t=20111011001") no-repeat scroll 0 -702px transparent;
+    display: block;
+    float: right;
+    height: 28px;
+    line-height: 25px;
+    margin: 5px 5px 0 0;
+    overflow: hidden;
+    text-align: center;
+    width: 69px;
+}
+.chatBox_closeButton:hover
+{
+    background: url("../images/sprite.png?t=20111011001") no-repeat scroll 0 -660px transparent;
+}
+.ie7_0 .chatBox_closeButton, .ie8_0 .chatBox_closeButton
+{
+    line-height: 24px;
+}
+.ie6_0 .chatBox_closeButton, .ie6_0 .chatBox_closeButton:hover
+{
+    background-image: url("../images/sprite.gif");
+}
+.chatBox_createDiscuButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -256px -378px transparent;
+}
+.ie6_0 .chatBox_createDiscuButton, .ie7_0 .chatBox_createDiscuButton
+{
+    background-image: url("../images/eIM_sprite_gif.gif?t=20111011001");
+}
+.chatBox_groupShareButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -144px -380px transparent;
+}
+.ie6_0 .chatBox_groupShareButton, .ie7_0 .chatBox_groupShareButton
+{
+    background-image: url("../images/eIM_sprite_gif.gif?t=20111011001");
+}
+.chatBox_groupShareButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -145px -380px transparent;
+}
+.ie6_0 .chatBox_groupShareButton, .ie7_0 .chatBox_groupShareButton
+{
+    background-image: url("../images/eIM_sprite_gif.gif?t=20111011001");
+}
+.chatBox_groupHomeButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -108px -380px transparent;
+}
+.ie6_0 .chatBox_groupHomeButton, .ie7_0 .chatBox_groupHomeButton
+{
+    background-image: url("../images/eIM_sprite_gif.gif?t=20111011001");
+}
+.chatBox_groupImpressButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -293px -380px transparent;
+}
+.ie6_0 .chatBox_groupImpressButton, .ie7_0 .chatBox_groupImpressButton
+{
+    background-image: url("../images/eIM_sprite_gif.gif?t=20111011001");
+}
+a.chatBox_menuButton
+{
+    width: 44px;
+}
+a.chatBox_menuButton:hover
+{
+    background-position: 0 -200px;
+    width: 44px;
+}
+.chatBox_groupSettingButton
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -182px -380px transparent;
+    float: left;
+    margin-right: 0 !important;
+}
+.ie6_0 .chatBox_groupSettingButton
+{
+    margin-left: 2px !important;
+}
+.chatBox_menuButton .chatBox_Down
+{
+    margin: 14px 0 0 2px;
+}
+.ie6_0 .chatBox_groupSettingButton, .ie7_0 .chatBox_groupSettingButton
+{
+    background-image: url("../images/eIM_sprite_gif.gif?t=20111011001");
+}
+.EIM_msgBox
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #666666;
+    bottom: 32px;
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    right: 30px;
+    width: 165px;
+    z-index: 1;
+}
+.EIM_titleInMsgBox
+{
+    background: none repeat scroll 0 0 #E1E1E1;
+    border-bottom: 1px solid #C8C8C8;
+    height: 24px;
+    overflow: hidden;
+}
+.EIM_titleTextInMsgBox
+{
+    color: #CCCCCC;
+    float: left;
+    height: 16px;
+    line-height: 16px;
+    padding: 4px 5px;
+}
+.EIM_viewMainPanelButtonInMsgBox
+{
+    color: #0D2A5C;
+    cursor: pointer;
+    display: block;
+    float: right;
+    height: 16px;
+    line-height: 16px;
+    padding: 4px 5px;
+    text-decoration: underline;
+}
+.EIM_messageList
+{
+    border-top: 1px solid white;
+    list-style: none outside none;
+    margin: 0;
+    max-height: 270px;
+    overflow: auto;
+    padding: 0;
+}
+.EIM_msgInMessageList
+{
+    color: black;
+    cursor: pointer;
+    display: block;
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    padding: 3px;
+    text-decoration: none;
+}
+.EIM_msgInMessageListHover
+{
+    background: none repeat scroll 0 0 #CBE7FC;
+    color: black;
+    cursor: pointer;
+    display: block;
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    padding: 3px;
+    text-decoration: none;
+}
+.avatarInMsgBox
+{
+    background: none repeat scroll 0 0 white;
+    float: left;
+    height: 20px;
+    overflow: hidden;
+    padding: 1px;
+    width: 20px;
+}
+.ignoreButtonInMsgBox
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -17px -185px transparent;
+    cursor: pointer;
+    float: right;
+    height: 16px;
+    margin: 2px 0;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 16px;
+}
+.msgCounterInMsgBox
+{
+    float: right;
+    height: 20px;
+    margin: 0 2px 0 0;
+}
+.buddyNameInMsgBox
+{
+    margin: 0 56px 0 24px;
+}
+.EIM_ignoreAllMsgButtonInMsgBox
+{
+    color: #0D2A5C;
+    cursor: pointer;
+    float: right;
+    height: 16px;
+    line-height: 16px;
+    padding: 5px;
+    text-align: right;
+    text-decoration: underline;
+    width: 50px;
+}
+.EIM_LoginBox
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #999999;
+    bottom: 32px;
+    display: none;
+    height: 335px;
+    overflow: auto;
+    position: absolute;
+    right: 30px;
+    width: 383px;
+    z-index: 1;
+}
+.EIM_LoginBox_Title
+{
+    height: 36px;
+}
+.EIM_LoginBox_TitleText
+{
+    font-size: 14px;
+    font-weight: bold;
+    height: 16px;
+    margin: 0 0 0 5px;
+    padding: 5px 0;
+}
+.EIM_LoginBox_CloseButton
+{
+    background: url("../images/eIM_sprite.gif?t=20111011001") no-repeat scroll -17px -59px transparent;
+    cursor: pointer;
+    float: right;
+    height: 18px;
+    margin: 3px 3px 0 0;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 18px;
+}
+.EIM_LoginBox_Iframe
+{
+    border: 0 solid blue;
+    height: 294px;
+    margin: 0 5px;
+    overflow: auto;
+    padding: 0;
+    width: 372px;
+}
+img.EIM_faceImg
+{
+    height: 24px;
+    position: static;
+    width: 24px;
+}
+img.EIM_replaceDefImg
+{
+    height: 24px;
+    position: static;
+    width: 24px;
+}
+img.EIM_fixImg
+{
+    position: static;
+}
+#miniCard
+{
+    height: auto;
+    left: 100px;
+    overflow: visible;
+    top: 100px;
+    width: 220px;
+}
+.miniCard_avatar
+{
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #999999;
+    box-shadow: 1px 1px 3px #999999;
+    display: inline;
+    float: left;
+    height: 40px;
+    margin: 5px 5px 0;
+    padding: 1px;
+    width: 40px;
+}
+.miniCard_name
+{
+    height: 18px;
+    overflow: hidden;
+    width: 155px;
+}
+.miniCard_name_inner
+{
+    color: #004869;
+    width: 500px;
+}
+.miniCard_signature
+{
+    height: 18px;
+    overflow: hidden;
+    width: 155px;
+}
+.miniCard_signature_inner
+{
+    width: 800px;
+}
+.miniCard_signature_inner
+{
+    height: 18px;
+    overflow: hidden;
+}
+.miniCard_clientType_WebIM
+{
+    height: 20px;
+    overflow: hidden;
+}
+.miniCard_clientType_Phone
+{
+    height: 20px;
+    overflow: hidden;
+}
+.miniCard_clientType_WebIM .miniCard_clientTypeIcon
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -2px -140px transparent;
+    display: inline;
+    float: left;
+    height: 16px;
+    overflow: hidden;
+    width: 16px;
+}
+.miniCard_clientType_Phone .miniCard_clientTypeIcon
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -22px -140px transparent;
+    display: inline;
+    float: left;
+    height: 16px;
+    overflow: hidden;
+    width: 16px;
+}
+.miniCard_clientType_IMforPad .miniCard_clientTypeIcon
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -80px -142px transparent;
+    display: inline;
+    float: left;
+    height: 16px;
+    overflow: hidden;
+    width: 16px;
+}
+.ie6_0 .miniCard_clientType_IMforPad .miniCard_clientTypeIcon, .ie7_0 .miniCard_clientType_IMforPad .miniCard_clientTypeIcon
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -80px -142px transparent;
+}
+.ie6_0 .miniCard_clientType_WebIM .miniCard_clientTypeIcon, .ie7_0 .miniCard_clientType_WebIM .miniCard_clientTypeIcon
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -2px -140px transparent;
+}
+.ie6_0 .miniCard_clientType_Phone .miniCard_clientTypeIcon, .ie7_0 .miniCard_clientType_Phone .miniCard_clientTypeIcon
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -22px -140px transparent;
+}
+.miniCard_clientType_innerWrapper
+{
+    display: none;
+}
+.miniCard_level
+{
+    height: 18px;
+    overflow: hidden;
+    width: 155px;
+}
+.miniCard_level_div
+{
+    display: inline;
+    float: left;
+    height: 16px;
+    margin: 0 1px 0 0;
+    overflow: hidden;
+    width: 16px;
+}
+.miniCard_level_upinfo
+{
+    display: block;
+    float: right;
+    text-align: left;
+    width: 155px;
+}
+.miniCard_level_upinfo
+{
+    display: block;
+    float: right;
+    text-align: left;
+    width: 155px;
+}
+.miniCard_level_upinfo_div
+{
+    display: inline;
+}
+.miniCard_level_upinfo .icon
+{
+    background: url("../../../style/images/portal_all_png.png?t=20111011001") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 12px;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 12px;
+}
+.ie6_0 .miniCard_level_upinfo .icon, .ie7_0 .miniCard_level_upinfo .icon
+{
+    background-image: url("../../../style/images/portal_all_gif.gif?t=20111011001");
+}
+.miniCard_level_upinfo .days
+{
+    background-position: -84px -84px;
+}
+.miniCard_level_upinfo .remainDays
+{
+    background-position: -104px -84px;
+    margin-left: 15px;
+}
+.miniCard_quickLink
+{
+    height: 22px;
+    margin: 20px 0 0;
+    width: 100%;
+}
+.miniCard_quickLink a
+{
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 16px;
+    margin: 2px 0 0 5px;
+    overflow: hidden;
+    width: 16px;
+}
+.ie6_0 .miniCard_quickLink a
+{
+    border: 1px solid white;
+}
+.miniCard_quickLink a:hover
+{
+    border: 1px solid blue;
+}
+.miniCard_qzone
+{
+    background: url("../../../style/images/portal_all_png.png?t=20111011001") no-repeat scroll -62px -62px transparent;
+}
+.ie6_0 .miniCard_qzone, .ie7_0 .miniCard_qzone
+{
+    background: url("../../../style/images/portal_all_gif.gif?t=20111011001") no-repeat scroll -62px -62px transparent;
+}
+.miniCard_qmail
+{
+    background: url("../../../style/images/portal_all_png.png?t=20111011001") no-repeat scroll -22px -62px transparent;
+}
+.ie6_0 .miniCard_qmail, .ie7_0 .miniCard_qmail
+{
+    background: url("../../../style/images/portal_all_gif.gif?t=20111011001") no-repeat scroll -22px -62px transparent;
+}
+.miniCard_video
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -3px -328px transparent;
+}
+.ie6_0 .miniCard_video, .ie7_0 .miniCard_video
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -3px -328px transparent;
+}
+.buddyOption_tabHead
+{
+    background: none repeat scroll 0 0 #DFEEF6;
+    height: 22px;
+    margin: 0;
+    width: 100%;
+}
+.buddyOption_tabHead_div
+{
+    color: #004869;
+    cursor: pointer;
+    display: inline;
+    float: right;
+    height: 16px;
+    margin: 2px 4px 0 5px;
+    overflow: hidden;
+}
+.buddyOption_tabBody
+{
+    background: none repeat scroll 0 0 white;
+    display: none;
+    height: auto;
+    width: 100%;
+}
+.miniCard_buddyOption_angle
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll 0 -180px transparent;
+    height: 5px;
+    line-height: 5px;
+    margin: auto auto -1px 13px;
+    position: relative;
+    text-indent: -1e+9px;
+    width: 10px;
+}
+.ie .miniCard_buddyOption_angle
+{
+    margin: auto auto -3px 13px;
+}
+.miniCard_buddyOption_Content
+{
+    border: 1px solid #FD7000;
+    margin: 0 3px 2px;
+    overflow: auto;
+    padding-left: 3px;
+}
+.rich_editor
+{
+    color: #000000;
+    font-family: 宋体;
+    font-size: 10pt;
+    font-style: normal;
+    font-weight: normal;
+    height: 100%;
+    margin-left: 3px;
+    text-decoration: none;
+}
+.rich_editor_div, .rich_editor_text
+{
+    border: 0 none;
+    display: block;
+    height: 100%;
+    margin: 0;
+    outline: 0 none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0;
+    width: 100%;
+    word-wrap: break-word;
+}
+.rich_editor_div *
+{
+    color: inherit !important;
+    display: inline;
+    float: none;
+    font: inherit !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static;
+    text-decoration: inherit !important;
+}
+.rich_editor_div img
+{
+    display: inline;
+    vertical-align: text-bottom;
+}
+.rich_editor_div img.system
+{
+    display: inline;
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+}
+.rich_editor_div img.custom
+{
+    display: inline;
+}
+.editorToolbar
+{
+    background: none repeat scroll 0 0 #E6F2FD;
+    border-top: 1px solid #B7D3E7;
+    bottom: 142px;
+    display: none;
+    height: 24px;
+    padding: 5px 0 3px;
+    position: absolute;
+    width: 100%;
+}
+.ie .editorToolbar
+{
+    height: 22px;
+}
+.editorToolbar ul, .editorToolbar li
+{
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.editorToolbar ul li
+{
+    float: left;
+}
+.editorToolbar ul.toolbar li
+{
+    margin: 0 1px;
+}
+.editorToolbar select.fontFamily
+{
+    border: 1px solid #6A9ED2;
+    width: 130px;
+}
+.editorToolbar select.fontSize
+{
+    border: 1px solid #6A9ED2;
+    width: 50px;
+}
+.editorToolbar a.icon
+{
+    border: 1px solid #E6F2FD;
+    display: inline-block;
+    height: 15px;
+    outline: 0 none;
+    padding: 1px;
+    width: 15px;
+}
+.editorToolbar a.icon:hover
+{
+    background-color: #9BC4EA;
+    border: 1px solid #7995B2;
+}
+.editorToolbar a.selected
+{
+    background-color: #9BC4EA;
+    border: 1px solid #7995B2;
+}
+.editorToolbar a.icon:hover span
+{
+    cursor: pointer;
+}
+.editorToolbar a.icon span
+{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+}
+.editorToolbar .bold
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -2px -43px transparent;
+}
+.ie6_0 .editorToolbar .bold, .ie7_0 .editorToolbar .bold
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -2px -43px transparent;
+}
+.editorToolbar .italic
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -42px -43px transparent;
+}
+.ie6_0 .editorToolbar .italic, .ie7_0 .editorToolbar .italic
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -42px -43px transparent;
+}
+.editorToolbar .underline
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -22px -43px transparent;
+}
+.ie6_0 .editorToolbar .underline, .ie7_0 .editorToolbar .underline
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -22px -43px transparent;
+}
+.editorToolbar .color
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -63px -43px transparent;
+}
+.ie6_0 .editorToolbar .color, .ie7_0 .editorToolbar .color
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -63px -43px transparent;
+}
+.editorToolbar .colorPanel
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #B2B2B2 #9BC4EA #9BC4EA #B2B2B2;
+    border-style: solid;
+    border-width: 1px;
+    bottom: 22px;
+    clear: left;
+    display: none;
+    left: 248px;
+    padding: 5px;
+    position: absolute;
+    width: 130px;
+}
+.editorToolbar .colorPanel a
+{
+    border: 1px solid #FFFFFF;
+    display: inline-block;
+    font-size: 1px;
+    outline: 0 none;
+    padding: 1px;
+}
+.editorToolbar .colorPanel a:hover
+{
+    border: 1px solid #000000;
+}
+.editorToolbar .colorPanel a span
+{
+    border: 1px solid #A6A6A6;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1px;
+    height: 10px;
+    width: 10px;
+}
+.warnning_green
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -44px -4px transparent;
+    margin-right: 2px;
+    padding: 0 6px;
+}
+.ie6_0 .warnning_green, .ie7_0 .warnning_green
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -44px -4px transparent;
+}
+.warnning_yellow
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -84px -4px transparent;
+    margin-right: 2px;
+    padding: 0 6px;
+}
+.ie6_0 .warnning_yellow, .ie7_0 .warnning_yellow
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -84px -4px transparent;
+}
+.warnning_blue
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -64px -4px transparent;
+    padding: 0 8px;
+}
+.ie6_0 .warnning_blue, .ie7_0 .warnning_blue
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -64px -4px transparent;
+}
+.warnning_red
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -24px -4px transparent;
+    padding: 0 8px;
+}
+.ie6_0 .warnning_red, .ie7_0 .warnning_red
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -24px -4px transparent;
+}
+.icon_green
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -44px -2px transparent;
+    padding: 0 5px;
+}
+.ie6_0 .icon_green, .ie7_0 .icon_green
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -44px -2px transparent;
+}
+.icon_yellow
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -84px -2px transparent;
+    padding: 0 5px;
+}
+.ie6_0 .icon_yellow, .ie7_0 .icon_yellow
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -84px -2px transparent;
+}
+.icon_blue
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -64px -2px transparent;
+    padding: 0 5px;
+}
+.ie6_0 .icon_blue, .ie7_0 .icon_blue
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -64px -2px transparent;
+}
+.icon_red
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -24px -2px transparent;
+    padding: 0 5px;
+}
+.ie6_0 .icon_red, .ie7_0 .icon_red
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -24px -2px transparent;
+}
+.icon_error
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -24px -4px transparent;
+    padding: 0 5px;
+}
+.ie6_0 .icon_red, .ie7_0 .icon_error
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -24px -4px transparent;
+}
+.error_tips .defaultFontStyle
+{
+    color: #505050;
+}
+.error_tips .defaultFontStyle a
+{
+    font-size: 10pt;
+}
+.error_tips a.clickdisable
+{
+    color: #505050;
+}
+.error_tips a.clickdisable:hover
+{
+    color: #505050;
+}
+.receiveFileBox a:link, .receiveFileBox a:visited, .receiveFileBox a:active, .receiveFileBox a:hover
+{
+    text-decoration: none;
+}
+.icon_excel
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll 0 -158px transparent;
+    display: inline-block;
+    height: 20px;
+    margin: 0 2px 0 0;
+    overflow: hidden;
+    width: 20px;
+}
+.icon_exe16
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -60px -158px transparent;
+    display: inline-block;
+    height: 20px;
+    margin: 0 2px 0 0;
+    overflow: hidden;
+    width: 20px;
+}
+.icon_media
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -100px -158px transparent;
+    display: inline-block;
+    height: 20px;
+    margin: 0 2px 0 0;
+    overflow: hidden;
+    width: 20px;
+}
+.icon_music
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -120px -158px transparent;
+    display: inline-block;
+    height: 20px;
+    margin: 0 2px 0 0;
+    overflow: hidden;
+    width: 20px;
+}
+.icon_others
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -140px -158px transparent;
+    display: inline-block;
+    height: 20px;
+    margin: 0 2px 0 0;
+    overflow: hidden;
+    width: 20px;
+}
+.icon_pdf16
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -180px -158px transparent;
+    display: inline-block;
+    height: 20px;
+    margin: 0 2px 0 0;
+    overflow: hidden;
+    width: 20px;
+}
+.icon_pic
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -80px -158px transparent;
+    display: inline-block;
+    height: 20px;
+    margin: 0 2px 0 0;
+    overflow: hidden;
+    width: 20px;
+}
+.icon_ppt
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -20px -158px transparent;
+    display: inline-block;
+    height: 20px;
+    margin: 0 2px 0 0;
+    overflow: hidden;
+    width: 20px;
+}
+.icon_rar-zip
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -160px -158px transparent;
+    display: inline-block;
+    height: 20px;
+    margin: 0 2px 0 0;
+    overflow: hidden;
+    width: 20px;
+}
+.icon_share-txt
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -200px -158px transparent;
+    display: inline-block;
+    height: 20px;
+    margin: 0 2px 0 0;
+    overflow: hidden;
+    width: 20px;
+}
+.icon_word
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -40px -158px transparent;
+    display: inline-block;
+    height: 20px;
+    margin: 0 2px 0 0;
+    overflow: hidden;
+    width: 20px;
+}
+.ie6_0 .icon_excel, .ie7_0 .icon_excel
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll 0 -158px transparent;
+}
+.ie6_0 .icon_exe16, .ie7_0 .icon_exe16
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -60px -158px transparent;
+}
+.ie6_0 .icon_media, .ie7_0 .icon_media
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -100px -158px transparent;
+}
+.ie6_0 .icon_music, .ie7_0 .icon_music
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -120px -158px transparent;
+}
+.ie6_0 .icon_others, .ie7_0 .icon_others
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -140px -158px transparent;
+}
+.ie6_0 .icon_pdf16, .ie7_0 .icon_pdf16
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -180px -158px transparent;
+}
+.ie6_0 .icon_pic, .ie7_0 .icon_pic
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -80px -158px transparent;
+}
+.ie6_0 .icon_ppt, .ie7_0 .icon_ppt
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -20px -158px transparent;
+}
+.ie6_0 .icon_rar-zip, .ie7_0 .icon_rar-zip
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -160px -158px transparent;
+}
+.ie6_0 .icon_share-txt, .ie7_0 .icon_share-txt
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -200px -158px transparent;
+}
+.ie6_0 .icon_word, .ie7_0 .icon_word
+{
+    background: url("../images/eIM_sprite_gif.gif?t=20111011001") no-repeat scroll -40px -158px transparent;
+}
+.gray
+{
+    color: gray;
+}
+.aDisable
+{
+    cursor: default;
+}
+.msgFileBox
+{
+    color: #505050;
+    line-height: 20px;
+    padding-left: 3px;
+    vertical-align: middle;
+}
+.mainpanel_limit_class_width_outer
+{
+    float: left;
+    overflow: hidden;
+    width: 60px;
+}
+.mainpanel_limit_class_width_inner
+{
+    float: left;
+    width: 999px;
+}
+.EIM_failBox
+{
+    display: none;
+    margin: 55px 0 0;
+    text-align: center;
+}
+.EIM_discuReLogining_text
+{
+    display: none;
+}
+.EIM_discuCreate
+{
+    margin-top: 40px;
+}
+.EIM_discuCreate .createGroup
+{
+    background: url("../images/create.png") no-repeat scroll center center transparent;
+    height: 26px;
+    width: 71px;
+}
+.EIM_discuCreate_text
+{
+    margin: auto;
+    width: 150px;
+}
+.EIM_discuCreate_button_container
+{
+    height: 26px;
+    margin: auto;
+    width: 80px;
+}
+.EIM_discuList_Avatar
+{
+    background: url("../images/discu_avatar.gif") no-repeat scroll -55px 1px transparent;
+    border: 0 solid #E1E1E1;
+    float: left;
+    height: 20px;
+    overflow: hidden;
+    padding: 1px;
+    position: static;
+    width: 20px;
+}
+.chatBoxDiscu_moreInfoArea
+{
+    height: 21px;
+    line-height: 21px;
+}
+.chatBox_discuInfoArea
+{
+    display: inline;
+    font-weight: normal;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    white-space: nowrap;
+    width: 98%;
+}
+.chatBox_discuInfoArea a.topic
+{
+    color: #000000;
+    display: block;
+    height: 21px;
+    line-height: 21px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0 0 7px;
+    vertical-align: baseline;
+    width: 160px;
+}
+.chatBox_discuInfoArea a.topic:hover
+{
+    background: url("../images/bg_ao_input.png") no-repeat scroll 0 0 transparent;
+}
+.chatBox_discuInfoArea span
+{
+    display: block;
+    float: left;
+    height: 21px;
+    line-height: 20px;
+    vertical-align: baseline;
+    width: 35px;
+}
+.chatBox_discuInfoArea .discuTopicBox
+{
+    float: left;
+    height: 21px;
+    line-height: 21px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    vertical-align: middle;
+    width: 160px;
+}
+.chatBox_discuInfoArea input
+{
+    background: url("../images/bg_ao_input.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    height: 21px;
+    left: 0;
+    line-height: 21px;
+    margin: 0;
+    outline: 0 none;
+    padding: 0 0 0 7px;
+    position: absolute;
+    top: 0;
+    vertical-align: middle;
+    width: 160px;
+}
+.ie6_0 .chatBox_discuInfoArea a.topic:hover, .ie6_0 .chatBox_discuInfoArea input
+{
+    background: none repeat scroll 0 50% transparent;
+}
+.chatBox_discuMember_mainArea
+{
+    background: none repeat scroll 0 0 #E8F6FB;
+    border-bottom-right-radius: 5px;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+}
+.chatBox_groupMember .discuMemberTitle
+{
+    float: left;
+}
+.eIM_header_switch_icon
+{
+    background: url("../images/eIM_sprite_png.png?t=20111011001") no-repeat scroll -52px -331px transparent;
+}
+.eIM_cxmenu_check_icon
+{
+    background: url("../images/eIM_sprite.png?t=20111011001") no-repeat scroll 5px -33px transparent;
+}
+.eIM_window .window_bg_container
+{
+    background: url("../images/bg3.png") repeat-x scroll 0 0 #F5FAFC;
+    border: 1px solid #3E7186;
+    border-radius: 5px 5px 5px 5px;
+    top: -1px;
+}
+.chatBox_liteInfoArea
+{
+    display: inline;
+    font-weight: normal;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    white-space: nowrap;
+}
+.eIM_window .window_titleBar, .window_current .eIM_window .window_titleBar
+{
+    background: none repeat scroll 0 0 transparent;
+    margin: 5px 10px;
+}
+.eIM_window .window_content
+{
+    border: 0 none;
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+    margin: 1px;
+    position: static;
+}
+.eIM_window .window_min
+{
+    background: url("../images/sprite.png?t=20111011001") repeat scroll 0 -944px transparent !important;
+    float: right;
+    height: 20px;
+    margin: 0;
+    width: 32px;
+}
+.ie6_0 .eIM_window .window_min
+{
+    background-image: url("../images/sprite.gif?t=20111011001") !important;
+}
+.eIM_window .window_min:hover
+{
+    background-position: 0 -904px !important;
+}
+.eIM_window .window_restore
+{
+    background: url("../images/sprite.png?t=20111011001") repeat scroll 0 -1024px transparent !important;
+    float: right;
+    height: 20px;
+    margin: 0;
+    width: 32px;
+}
+.ie6_0 .eIM_window .window_restore
+{
+    background-image: url("../images/sprite.gif?t=20111011001") !important;
+}
+.eIM_window .window_restore:hover
+{
+    background-position: 0 -984px !important;
+}
+.ie6_0 .eIM_window .window_restore:hover
+{
+    background-image: url("../images/sprite.gif?t=20111011001") !important;
+}
+.eIM_window .window_max
+{
+    background: url("../images/sprite.png?t=20111011001") repeat scroll 0 -864px transparent !important;
+    float: right;
+    height: 20px;
+    margin: 0;
+    width: 32px;
+}
+.ie6_0 .eIM_window .window_max
+{
+    background-image: url("../images/sprite.gif?t=20111011001") !important;
+}
+.eIM_window .window_max:hover
+{
+    background-position: 0 -824px !important;
+}
+.ie6_0 .eIM_window .window_max:hover
+{
+    background-image: url("../images/sprite.gif?t=20111011001") !important;
+}
+.eIM_window .window_close
+{
+    background: url("../images/sprite.png?t=20111011001") repeat scroll 0 -784px transparent !important;
+    float: right;
+    height: 20px;
+    margin: 0;
+    width: 42px;
+}
+.ie6_0 .eIM_window .window_close
+{
+    background-image: url("../images/sprite.gif?t=20111011001") !important;
+}
+.eIM_window .window_close:hover
+{
+    background-position: 0 -744px !important;
+}
+.ie6_0 .eIM_window .window_close:hover
+{
+    background: url("../images/sprite.gif?t=20111011001") repeat scroll 0 -744px transparent;
+}
+.eIM_window .window_titleButtonBar
+{
+    position: absolute;
+    right: 2px;
+    top: -1px;
+}
+.eIM_window a
+{
+    color: #000000;
+}
+.eIM_window .window_button
+{
+    background: url("../images/sprite.png?t=20111011001") no-repeat scroll 0 -702px transparent;
+    height: 22px;
+    line-height: 20px;
+    margin: 0 10px 0 0;
+    width: 69px;
+}
+.ie7_0 .eIM_window .window_button, .ie8_0 .eIM_window .window_button
+{
+    line-height: 24px;
+}
+.eIM_window .window_button:hover
+{
+    background-position: 0 -660px !important;
+}
+.eIM_window .window_cancel
+{
+    display: inline;
+}
+.eIM_window .window_bodyOuter
+{
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    top: 53px;
+    padding: 0;
+}
+.eIM_window .content_area
+{
+    background: none repeat scroll 0 0 transparent;
+}
+.eIM_window .selectBuddy
+{
+    background: none repeat scroll 0 0 transparent;
+}
+.eIM_window .window_title
+{
+    line-height: 15px;
+    text-align: left;
+    color: #fff;
+    text-shadow: 1px 2px 3px #000000;
+}
+.eIM_window .window_controlArea, .window_current .eIM_window .window_controlArea
+{
+    background: none repeat scroll 0 50% transparent;
+    border: 0 none;
+    height: 36px;
+}
+.eIM_window .ui_messageBox
+{
+    background: none repeat scroll 0 0 transparent;
+}
+.eIM_window .chatBox_msgList a
+{
+    color: #45649E;
+}
+.eIM_window .userDetails_area
+{
+    background: none repeat scroll 0 50% transparent;
+}
+.a
+{
+    color: Black;
+}
+
+.hiddenIframe
+{
+    height: 1px;
+    left: -9999px;
+    overflow: hidden;
+    position: absolute;
+    top: -9999px;
+    width: 1px;
+}
+.content_area
+{
+    background: none repeat scroll 0 0 white;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+.appStartingCover
+{
+    background: url("/Content/webdesk/images/app_starting2.gif") no-repeat scroll center center #FFFFFF;
+    bottom: 0;
+    display: none;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+.appStartingAnimation
+{
+    height: 80px;
+    left: 50%;
+    margin: -40px 0 0 -60px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    width: 120px;
+}
+.bubbleContainer
+{
+    background: url("/Content/Images/msgbubble_bg.png") no-repeat scroll 0 1px transparent;
+    cursor: move;
+    display: none;
+    font-family: tahoma;
+    height: 32px;
+    position: absolute;
+    width: 300px;
+}
+.bubblePanel
+{
+    color: #FFFFFF;
+    cursor: auto;
+    height: 22px;
+    line-height: 20px;
+    margin: 5px 8px;
+}
+.bubbleMsgList
+{
+    background: url("/Content/Images/msgbubble_list_bg.png") no-repeat scroll 0 0 transparent;
+    cursor: default;
+    display: none;
+    height: 210px;
+    left: 10px;
+    position: absolute;
+    top: -210px;
+    width: 280px;
+}
+.bubblePanel .icon
+{
+    background: url("/Content/Images/msgbubble_icons.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: left;
+    height: 16px;
+    margin: 3px 4px 0;
+    vertical-align: middle;
+    width: 16px;
+}
+.bubblePanel .item
+{
+    cursor: pointer;
+}
+.bubblePanel .single
+{
+    background-position: 0 -16px;
+}
+.bubblePanel .setting
+{
+    background-position: 0 -64px;
+    cursor: pointer;
+    float: right;
+    margin-top: 5px;
+}
+.bubblePanel .item .body
+{
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    height: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 170px;
+}
+.bubblePanel .item .content
+{
+    display: inline-block;
+    width: 250px;
+    height: 30px;
+    top: 0px;
+    vertical-align: top;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.bubbleMsgList h3
+{
+    color: #FFFFFF;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+    margin: 0;
+    padding: 0 0 0 12px;
+}
+h1, h2, h3, h4, h5, h6, strong
+{
+    font-weight: bold;
+}
+.bubbleMsgList .bubbleMsgListInner
+{
+    background: url("/Content/Images/msgbubble_list_bg_inner.png") repeat-x scroll 0 0 #FFFFFF;
+    height: 180px;
+    margin: 0 auto;
+    width: 270px;
+}
+.bubbleMsgList .bubbleMsgListContainer
+{
+    height: 155px;
+    overflow-y: auto;
+}
+.bubbleMsgList ul
+{
+    padding: 12px 5px 0;
+}
+.bubbleMsgList ul, .bubbleMsgList li
+{
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+ol, ul, dl
+{
+    margin-left: 2em;
+}
+.bubbleMsgList .item
+{
+    cursor: pointer;
+}
+.bubbleMsgList ul, .bubbleMsgList li
+{
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.bubbleMsgListContainer a
+{
+    display: block;
+    padding: 3px 5px 3px 7px;
+    text-decoration: none;
+}
+.bubbleMsgListContainer a:hover
+{
+    display: block;
+    padding: 3px 5px 3px 7px;
+    text-decoration: none;
+    background-color: #C0DCEB;
+}
+a
+{
+    font: 12px/1.5 tahoma,helvetica,clean,sans-serif;
+}
+.bubbleMsgList .item .count
+{
+    color: #45649E;
+    float: right;
+}
+.bubbleMsgList .item .content
+{
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 170px;
+}
+.bubbleMsgList .item .content .contentInner
+{
+    display: block;
+    width: 20000px;
+}
+.bubbleMsgList .bubbleMsgButtons
+{
+    height: 20px;
+    padding: 3px 8px 0 12px;
+}
+.bubbleMsgButtons .cancelNotify
+{
+    float: left;
+}
+.bubbleMsgButtons a
+{
+    text-decoration: none;
+}
+.bubbleMsgButtons a:hover
+{
+    text-decoration: underline;
+}
+.bubbleMsgButtons .viewAll
+{
+    float: right;
+}
+.bubbleMsgList .item .avatar
+{
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+    width: 20px;
+}
+fieldset, img
+{
+    border: 0 none;
+}
+.im_find_button
+{
+    position: absolute;
+    bottom: 8px;
+    text-align: right;
+    width: 160px;
+    right: 5px;
+}
+.im_find_button input
+{
+    background: url(../images/data_button_bg.gif);
+    width: 69px;
+    height: 21px;
+    line-height: 21px;
+    border: 0;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+}
+.avatarInChatbox
+{
+    cursor: pointer;
+}
+/*IM查找好友*/
+.im_find
+{
+    border: 1px solid #99bbe8;
+    background: #f0fafd;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    width: 500px;
+    height: 300px;
+    margin: 3px auto;
+    line-height: 20px;
+    position: relative;
+}
+.im_find_title
+{
+    margin: 5px 10px;
+    padding: 0 5px;
+    border-bottom: 1px solid #ddd;
+    height: 30px;
+    line-height: 30px;
+}
+.im_find_content
+{
+    margin: 0 10px;
+    height: 220px;
+    width: 480px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+.im_find_mode
+{
+    margin: 10px 20px;
+}
+.im_find_input
+{
+    line-height: 25px;
+    margin: 0 20px;
+}
+.im_find_input input
+{
+    width: 425px;
+    height: 25px;
+    height: 20px\9;
+    border: 1px solid #99bbe8;
+    background: #fff;
+    color: #999;
+    padding: 0 0 0 3px;
+    padding: 5px 0 0 3px\9;
+}
+.im_find_button
+{
+    position: absolute;
+    bottom: 8px;
+    text-align: right;
+    width: 160px;
+    right: 5px;
+}
+.im_find_button input
+{
+    background: url(../images/data_button_bg.gif);
+    width: 69px;
+    height: 21px;
+    line-height: 21px;
+    border: 0;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+}
+.im_find_content table
+{
+    background: url(../images/im_find_table_bg.gif) 0 0;
+    text-align: left;
+}
+.im_find_content table th
+{
+    font-weight: normal;
+}
+.im_find_content table img
+{
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin: 0 0 0 2px;
+}
+.im_find_content table a
+{
+    color: #333;
+    text-decoration: none;
+    padding: 0 0 0 20px;
+    margin: 0 20px 0 0;
+}
+.im_find_content table .im_find_detail
+{
+    background: url(../images/im_find_detail.gif) left center no-repeat;
+}
+.im_find_content table .im_find_add
+{
+    background: url(../images/im_find_add.gif) 4px center no-repeat;
+}
+.im_find_content .left
+{
+    width: 110px;
+    float: left;
+    display: inline;
+    margin: 5px 0 0;
+}
+.im_find_content .left img
+{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #99bbe8;
+    vertical-align: top;
+    margin: 0 0 10px;
+}
+.im_find_content .left h4
+{
+    font-size: 12px;
+}
+.im_find_content .left p
+{
+    color: #999;
+}
+.im_find_content .right
+{
+    width: 332px;
+    float: right;
+    display: inline;
+    margin: 5px 0 0;
+}
+.im_find_content .right textarea
+{
+    width: 330px;
+    height: 100px;
+    border: 1px solid #99bbe8;
+    margin: 0 0 10px;
+}
+.im_find_content .right .input
+{
+    width: 155px;
+    height: 20px;
+    border: 1px solid #99bbe8;
+}
+.im_find_content .right select
+{
+    width: 155px;
+    height: 22px;
+    border: 1px solid #99bbe8;
+}
+.im_find_content .right p
+{
+    line-height: 25px;
+}
+.im_find_content .right .input_text_2
+{
+    width: 287px;
+    height: 20px;
+    border: 1px solid #99bbe8;
+}

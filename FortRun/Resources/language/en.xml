@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary>
+  <Language Key="en" Value="English">
+    <Module Key="natural" Value="natural">
+      <Property Key="province" Value="province" />
+      <Property Key="city" Value="city" />
+      <Property Key="county" Value="county" />
+      <Property Key="male" Value="male" />
+      <Property Key="female" Value="female" />
+      <Property Key="on" Value="ON" />
+      <Property Key="off" Value="OFF" />
+    </Module>
+
+    <Module Key="system" Value="System Module">
+      <Property Key="add" Value="Add" />
+      <Property Key="remove" Value="Remove" />
+      <Property Key="edit" Value="Edit" />
+      <Property Key="search" Value="Search" />
+      <Property Key="reload" Value="Reload" />
+      <Property Key="submit" Value="Submit" />
+      <Property Key="reset" Value="Reset" />
+      <Property Key="remark" Value="Remark" />
+    </Module>
+
+    <Module Key="UserBaseModel" Value="UserBaseModel">
+      <Property Key="memID" Value="Member ID" />
+      <Property Key="memName" Value="Member Name" />
+      <Property Key="memPwd" Value="Password" />
+      <Property Key="memSex" Value="Gender" />
+      <Property Key="memStatus" Value="Status" />
+      <Property Key="memIdNum" Value="Id Number" />
+      <Property Key="memCellPhone" Value="Phone Number" />
+      <Property Key="memRegisterTime" Value="Registration Time" />
+    </Module>
+
+    <Module Key="ResourceModel" Value="Resource Model">
+      <Property Key="resID" Value="Resource ID" />
+      <Property Key="resCategory" Value="Resource Category" />
+      <Property Key="resName" Value="Resource Name" />
+      <Property Key="resSystem" Value="Resource of System" />
+      <Property Key="resScope" Value="Resource Scope" />
+      <Property Key="resStatus" Value="Resource Status" />
+    </Module>
+
+    <Module Key="Hotel-Group" Value="Hotel Setting : Group Manage">
+      <Property Key="GroupID" Value="Group ID" />
+      <Property Key="GroupName" Value="Group Name" />
+      <Property Key="GroupAccount" Value="Group Account" />
+      <Property Key="GroupAccStatus" Value="Account Status" />
+      <Property Key="GroupHotelNum" Value="Hotels Count" />
+    </Module>
+
+    <Module Key="Hotel-Hotel" Value="otel Setting : Hotel Manage">
+      <Property Key="HotelID" Value="Hotel ID" />
+      <Property Key="HotelName" Value="Hotel Name" />
+      <Property Key="HotelAccount" Value="Hotel Account" />
+      <Property Key="HotelAccStatus" Value="Account Status" />
+      <Property Key="HotelHepNum" Value="Hep Count" />
+    </Module>
+  </Language>
+</ResourceDictionary>

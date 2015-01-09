@@ -1,0 +1,276 @@
+﻿@{
+    ViewBag.Title = "资源设置";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Header
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#chklist').hcheckbox();
+            $('#radiolist').hradio();
+            $('#btnOK').click(function () {
+                var checkedValues = new Array();
+                $('#chklist :checkbox').each(function () {
+                    if ($(this).is(':checked')) {
+                        checkedValues.push($(this).val());
+                    }
+                });
+
+                alert(checkedValues.join(','));
+                alert($('#radiolist :checked').val());
+            });
+            $('#datagrid').datagrid({
+                url: "/Resource/GetResList",
+                rownumbers: true,
+                fit: true,
+                singleSelect: true,
+                toolbar: '#toolbar',
+                columns: [[{ field: 'resID', title: '@Html.OutputText("resID".Toi18n())', width: 100 },
+                    { field: 'resName', title: '@Html.OutputText("resName".Toi18n())', width: 120 },
+                    { field: 'resCategory', title: '@Html.OutputText("resCategory".Toi18n())', width: 120, align: 'center' },
+                    { field: 'resStatus', title: '@Html.OutputText("resStatus".Toi18n())', width: 120, formatter: function (value, row, index) {
+                        return value == 'on' ? locale.status.status_on : locale.status.status_off;
+                    }
+                    },
+                    { field: 'resScope', title: '@Html.OutputText("resScope".Toi18n())', width: 120 },
+                    { field: 'resSystem', title: '@Html.OutputText("resSystem".Toi18n())', width: 120
+                    }, { field: 'other', title: '', width: 120, formatter: function (value, row, index) {
+                        return '<a onclick="doPersonalDetail(\'' + row.resName + '\',\'' + row.resID + '\')" href="javascript:void(0)">详情</a>';
+                    }
+                    }]]
+            });
+
+            $('#win').window('close');
+
+            function doSearch(val) {
+                if (val != '') {
+                    //do search
+                }
+            }
+
+            window.validSearchParam = function () {
+                var val = $('#resName').val();
+                val == '' ? $('#resName').focus() : doSearch(val);
+            };
+            window.doReload = function () {
+                $('#datagrid').datagrid('reload');
+            };
+            window.doAdd = function () {
+                $('#win').window({
+                    title: locale.btn.btn_add
+                });
+                $('#win').window('open');
+            };
+            window.doEdit = function () {
+                var data = $('#datagrid').datagrid('getSelected');
+                if (data) {
+                    $('#ff').form('load', {
+                        resID: data.resID,
+                        resName: data.resName,
+                        resCategory: data.resCategory,
+                        resStatus: data.resStatus,
+                        resSystem: data.resSystem,
+                        resScope: data.resScope
+                    });
+                    $('#win').window({
+                        title: locale.btn.btn_edit
+                    });
+                    $('#win').window('open');
+                } else {
+                    $.messager.alert(locale.msg.msg_title_info, locale.msg.msg_question_edit_null, 'info');
+                }
+            };
+            window.doRemove = function () {
+                var data = $('#datagrid').datagrid('getSelected');
+                if (data) {
+                    $.messager.confirm(locale.msg.msg_title_ques, locale.fn.fn_remove(data.resName), function (r) {
+                        if (r) {
+                            var rowIndex = $('#datagrid').datagrid('getRowIndex', data);
+                            $('#datagrid').datagrid('deleteRow', rowIndex);
+                        }
+                    });
+                } else {
+                    $.messager.alert(locale.msg_title_info, msg_question_remvove_null, 'info');
+                }
+            };
+            window.submitForm = function () {
+                $('#ff').form({
+                    url: '/Main/AddMember',
+                    onSubmit: function () {
+                        return $(this).form('validate');
+                    },
+                    success: function (data) {
+                        var rowdata = {
+                            resID: 9999,
+                            resName: form1.resName.value,
+                            resCategory: form1.resCategory.value,
+                            resStatus: form1.resStatus.value,
+                            resSystem: form1.resSystem.value,
+                            resScope: form1.resScope.value
+                        };
+                        appendRowByAdd(rowdata);
+
+                        data = $.parseJSON(data); //string to json
+                        $.messager.alert(locale.msg.msg_title_info, data.message, 'info');
+                        $('#win').window('close');
+                    }
+                });
+                $('#ff').submit();
+            };
+            window.clearForm = function () {
+                $('#ff').form('clear');
+            };
+
+            function appendRowByAdd(data) {
+                if (data) {
+                    $('#datagrid').datagrid('insertRow', {
+                        index: 0,
+                        row: {
+                            resID: data.resID,
+                            resName: data.resName,
+                            resCategory: data.resCategory,
+                            resStatus: data.resStatus,
+                            resSystem: data.resSystem,
+                            resScope: data.resScope
+                        }
+                    });
+                }
+            }
+        });
+
+        function doPersonalDetail(t, id) {
+            if (t && id && t != id) {
+                var href = "/Personal/PersonalDetail?peronid" + id;
+                window.top.addTab(locale.fn.fn_detail(t), href, 'icon-edit');
+            }
+        }
+        /*关联角色方法*/
+        function doAssociatedRole() {
+            var dg = new $.eui.dg('datagrid');
+            var data = dg.getSelectedRow();
+            if (data) {
+                $('#win-role').window({
+                    title: '资源[' + data.resName + ']关联角色设置'
+                });
+                bindRoleData();
+                $('#win-role').window('open');
+            } else {
+                $.messager.alert('提示', '请选择一条记录后再进行操作', 'info');
+            }
+        }
+        function bindRoleData() {
+            $.ajax({
+                type: "POST",
+                url: "/Menu/GetMenuList/" + window.g_guid,
+                data: "",
+                success: function (msg) {
+                    if (msg) {
+                        msg = $.parseTreeData(msg.rows);
+                        $('#menutree').tree({
+                            data: msg
+                        });
+                    } else {
+                        $.messager.alert('错误', '菜单加载不成功', 'error');
+                    }
+                }
+            });
+        }
+    </script>
+}
+<table id="datagrid">
+    <!--datagrid-->
+</table>
+<div id="toolbar" style="padding: 5px; height: auto">
+    <div style="margin-bottom: 5px">
+        <a href="#" onclick="doAdd()" class="easyui-linkbutton" iconcls="icon-add" plain="true">
+            @Html.OutputText("add".Toi18n())</a> <a href="#" class="easyui-linkbutton" onclick="doEdit()"
+                iconcls="icon-edit" plain="true">@Html.OutputText("edit".Toi18n())</a> <a href="#"
+                    class="easyui-linkbutton" iconcls="icon-remove" onclick="doRemove()" plain="true">@Html.OutputText("remove".Toi18n())</a>
+        <a href="#" class="easyui-linkbutton" iconcls="icon-reload" plain="true" onclick="doReload()">@Html.OutputText("reload".Toi18n())</a>
+        <a href="#" class="easyui-linkbutton" iconcls="icon-ok" plain="true" onclick="doAssociatedRole()">
+            关联角色</a>
+    </div>
+    <div>
+        <label for="resName">
+            @Html.OutputText("resName".Toi18n())：</label>
+        <input id="resName" class="easyui-validatebox" data-options="required:true,validType:''" />
+        <a id="btn" href="#" onclick="validSearchParam()" class="easyui-linkbutton" data-options="iconCls:'icon-search'">
+            @Html.OutputText("search".Toi18n())</a>
+    </div>
+</div>
+<div id="win" class="easyui-window" style="width: 380px; height: 270px" data-options="iconCls:'icon-add',modal:true,collapsible:false">
+    <div style="padding: 10px 0 10px 60px">
+        <form id="ff" name="form1" method="post">
+        <table>
+            <tr>
+                <td>
+                    @Html.OutputText("resName".Toi18n()):<input type="hidden" name="resID" />
+                </td>
+                <td>
+                    <input class="easyui-validatebox" type="text" name="resName" data-options="required:true"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.OutputText("resCategory".Toi18n()):
+                </td>
+                <td>
+                    <select class="easyui-combobox" name="resCategory" data-options="required:true">
+                        <option value="状态1">状态1</option>
+                        <option value="状态2">状态2</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.OutputText("resStatus".Toi18n()):
+                </td>
+                <td>
+                    <select class="easyui-combobox" name="resStatus" data-options="required:true">
+                        <option value="on">@Html.OutputText("on".Toi18n())</option>
+                        <option value="off">@Html.OutputText("off".Toi18n())</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.OutputText("resSystem".Toi18n()):
+                </td>
+                <td>
+                    <select class="easyui-combobox" name="resSystem" data-options="required:true">
+                        <option value="Hep后台">Hep后台</option>
+                        <option value="手机查房客户端">Hep后台</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.OutputText("resScope".Toi18n()):
+                </td>
+                <td>
+                    <div id="chklist">
+                        <input type="checkbox" value='1' name="resScope" /><label>平台</label>
+                        <input type="checkbox" value='2' name="resScope" /><label>集团</label>
+                        <input type="checkbox" value='3' name="resScope" /><label>门店</label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        </form>
+        <div style="text-align: center; padding: 5px">
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">@Html.OutputText("submit".Toi18n())</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">@Html.OutputText("reset".Toi18n())</a>
+        </div>
+    </div>
+</div>
+<div id="win-role" class="easyui-window" title="资源关联角色" style="width: 380px; height: 270px"
+    data-options="iconCls:'icon-save',modal:true,collapsible:false,closed:true,tools:'#tls'">
+    <ul id="menutree" class="easyui-tree" data-options="
+        animate:true,
+        checkbox:true,
+        lines:true">
+    </ul>
+</div>
+<div id="tls">
+    <a href="#" onclick="getChecked();" title="保存修改" class="icon-save"></a>
+</div>
